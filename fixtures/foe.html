@@ -1,0 +1,634 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://foe.tu.edu.np/assets/temp2/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://foe.tu.edu.np/assets/temp2/font/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://foe.tu.edu.np/assets/temp2/css/temp2.css">
+    <link rel="shortcut icon" href="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" type="image/x-icon">
+    <title>FACULTY OF EDUCATION</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://foe.tu.edu.np/assets/temp1/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://foe.tu.edu.np/assets/temp1/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://foe.tu.edu.np/assets/temp1/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://foe.tu.edu.np/assets/temp1/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://foe.tu.edu.np/assets/temp1/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <header class="header shadow">
+        <div class="header-middle text-center">
+        <div class="container">
+                <div class="row align-items-center m-display-none d-flex">
+                    <div class="col-10 d-flex">
+                        <!-- <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100"> -->
+                        <img src="https://foe.tu.edu.np/assets/logo.png" height="100"
+                        alt="">
+                        <div class="text-start mt-4">
+                            <h4>FACULTY OF EDUCATION</h4>
+                            <small><b>Faculty of Education, Office of the Dean, Balkhu</b></small>
+                            <p>Balkhu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="header-middle-right">
+                            <ul class="header-middle-contact text-end d-flex">
+                                    <li class="me-2 social-media-icons"><a href="https://www.facebook.com/tufoedu" target="_blank"><i class="bi bi-facebook " style="color: #338CF1;font-size: 1.5rem;"></i></a>
+                                    </li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-twitter" style="color: #399BEF ;font-size: 1.5rem;"></i></a></li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-linkedin" style="color: #2366C2;font-size: 1.5rem;"></i></a></li>
+                                    <li class="dropdown show">
+                                        <div class="me-2 mt-1" id="shareButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-share-fill" style="color: #1b6ae0 ;font-size: 1.2rem;"></i>
+                                        </div>
+                                        <div class="dropdown-menu" aria-labelledby="shareButton">
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffoe.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-facebook me-2 text-primary"></i>Share on facebook
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://twitter.com/intent/tweet?text=Check+this+out!&url=https%3A%2F%2Ffoe.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-twitter me-2 text-info"></i>Share on twitter
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffoe.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-linkedin me-2 text-primary"></i>Share on linkedin
+                                            </a>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100">
+                    <div class="text-start ms-2">
+                        <div class="title">FACULTY OF EDUCATION</div>
+                        <div class="address">Balkhu, Nepal</div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/" id="navbarDropdown" role="button" aria-expanded="false">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://foe.tu.edu.np/institute/calendar" id="navbarDropdown" role="button"
+                           aria-expanded="false">
+                            <img src="/assets/calendar.png" alt="" width="25">
+
+
+                        </a>
+                    </li>
+                                                                                                        <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/introduction-2153" class="text-white">
+                                                
+                                                About FOE
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/introduction-2153">Introduction
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/foe-profile-2597">FoE Profile
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://foe.tu.edu.np/messageFromHead/144"
+                                                           class="text-white">Message from Dean</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/staffs">Assistant Dean
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/introduction-page-231" class="text-white">
+                                                
+                                                Academic Programme
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/phd-289">PhD
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/m-phil-290">M. Phil
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/master-752">Masters Programme
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/bachelor-750">Bachelor Programme
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/pgd-education-2199">PGDE (Post Graduate Diploma of Education)
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="https://portal.tu.edu.np/downloads/2025_10_19_11_09_39.pdf"
+                                           target="_blank"> PhD Guidelines
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/notices"> Notice
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="http://entrance.tufoe.edu.np/"
+                                           target="_blank"> Online Form
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="/downloads"
+                                               id="navbarDropdown"
+                                               role="button" aria-expanded="false">
+                                                Curriculum
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://foe.tu.edu.np/downloads?category=481"
+                                                           class="text-white">Bachelor of Education (B.Ed.)</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=481"
+                                                                        target="_blank">BICTE Curriculum</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://foe.tu.edu.np/downloads?category=358"
+                                                           class="text-white">Master of Education (M.Ed.)</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=358"
+                                                                        target="_blank">M.Ed. (Regular) Curriculum</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=359"
+                                                                        target="_blank">MSSED (Master of Social Studies Education) Curriculum</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=482"
+                                                                        target="_blank">MESDP</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=483"
+                                                                        target="_blank">M.Ed. (3 Semester) Science Education</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://foe.tu.edu.np/downloads?category=484"
+                                                                        target="_blank">M.Ed. Inclusive Education</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://foe.tu.edu.np/downloads?category=586"
+                                                           class="text-white">PGDE (Post Graduate Diploma of Education) Curriculum</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/events"> Events
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="https://foetu.edu.np/"
+                                           target="_blank"> LMS
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/downloads"><i class="bi bi-download"></i> Download
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/pages/name-list-of-students-who-completed-thesis-2557"> Thesis
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="https://portal.tu.edu.np/downloads/CurriculumNeedAnalysisRepor_2026_02_23_12_06_35.pdf"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                 Research Report
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://drive.google.com/drive/folders/1cyBsVboxjf4E2wJBILTsUuDhVnGwcwIg"
+                                                           class="text-white">School Report</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                            
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-plus"></i> More
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                                                    <li>
+                                                                                    <a class="dropdown-item"
+                                               href="contact-us">Contact Us</a>
+                                                                            </li>
+                                                            </ul>
+                        </li>
+                                    </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="scroll-news">
+            <div class="container">
+                <div class="news-acroll-warpper position-relative">
+                    <div class="scroll-news-badge"><i class="bi bi-newspaper me-2"></i>Highlights</div>
+                    <marquee behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
+                        <ul>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">1</div>
+                                    <a href="https://foe.tu.edu.np/notices/14427">स्नातक तह BICTE/B.Ed. (ICT, SNE) चौथो तथा सातौँ सेमेस्टरको परीक्षा आवेदन फाराम पुनः भर्ने/भराउने सम्बन्धी सूचना</a>
+                                </li>
+                                                    </ul>
+                    </marquee>
+                </div>
+
+            </div>
+        </div>
+    </header>
+        <div class="inner-banner"
+        style="background-image: url(/assets/temp1/images/not.png);">
+        <div class="container">
+            <div class="inner-banner-wrapper">
+                <div class="inner-banner-detail">
+                    <h4 class="title">Notices</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="https://foe.tu.edu.np">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Notices
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="notices-pg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="section-title mb-5 py-3">
+                        <h3><i class="bi bi-layout-text-window-reverse"></i> Notices</h3>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <form class="form" method="GET" action="https://foe.tu.edu.np/notices">
+                            <div class="row">
+                                <div class="col-md-12 form-group my-2">
+                                    <input class="form-control border border-secondary" type="title" placeholder="Title"
+                                        name="title" aria-label="Title" value="">
+                                </div>
+
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="start_date" id="start_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_start_date" placeholder="Publish Date From" aria-label="Publish Date"
+                                        data-field="#start_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="end_date" id="end_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_end_date" placeholder="Publish Date To" aria-label="Publish Date"
+                                        data-field="#end_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <select class="form-select border border-secondary" name="notice_type">
+                                                                                    <option value=""
+                                                selected>
+                                                Select Notice Type</option>
+                                                                                    <option value="9"
+                                                >
+                                                Result</option>
+                                                                                    <option value="10"
+                                                >
+                                                Exam Form</option>
+                                                                                    <option value="11"
+                                                >
+                                                Entrance Form</option>
+                                                                                    <option value="12"
+                                                >
+                                                Entrance Result</option>
+                                                                                    <option value="575"
+                                                >
+                                                Exam Center</option>
+                                                                                    <option value="577"
+                                                >
+                                                Admission</option>
+                                                                                    <option value="580"
+                                                >
+                                                General Notice</option>
+                                                                                    <option value="773"
+                                                >
+                                                Retotaling Result</option>
+                                                                                    <option value="774"
+                                                >
+                                                Routine</option>
+                                                                                    <option value="876"
+                                                >
+                                                Center Selection</option>
+                                                                            </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search me-2"></i>
+                                        Search</button>
+                                    <a href="https://foe.tu.edu.np/notices" class="btn btn-danger rounded-0"><i
+                                            class="bi bi-arrow-clockwise me-2 "></i>Refresh</a>
+                                </div>
+                            </div>
+                        </form>
+
+                        <hr>
+                    </div>
+                    <div class="notices-warpper rec-post">
+                        <ul>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-14</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/14427">
+                                            <h5>स्नातक तह BICTE/B.Ed. (ICT, SNE) चौथो तथा सातौँ सेमेस्टरको परीक्षा आवेदन फाराम पुनः भर्ने/भराउने सम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-27</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/14034">
+                                            <h5>क्याम्पस नवीकरण लागि पुन: समय थप सम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-21</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/13930">
+                                            <h5>सूची दर्ता गर्ने सम्बन्धी सूचना २०८३</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-02</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/13637">
+                                            <h5>शोधपत्र बुझाउने सम्बन्धी सूचना 2083</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-05-05</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/12747">
+                                            <h5>क्याम्पस नवीकरणका लागि पुन: समय थप सम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-04-27</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://foe.tu.edu.np/notices/12567">
+                                            <h5>शिक्षकको पेसागत क्षमता अभिवृद्धि तालिमका लागि आवेदन फाराम भर्नेसम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                    </ul>
+                        <nav>
+        <ul class="pagination">
+            
+                            <li class="page-item disabled" aria-disabled="true">
+                    <span class="page-link">&laquo; Previous</span>
+                </li>
+            
+            
+                            <li class="page-item">
+                    <a class="page-link" href="https://foe.tu.edu.np/notices?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNC0yNyAwNTo0NTowMiIsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0" rel="next">Next &raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="sidebar">
+                        <h4 class="title">
+                            More News
+                        </h4>
+                        <hr>
+                                                    <tr>
+                                <td colspan="4">No data found</td>
+                            </tr>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="back-to-top shadow">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<style>
+    .phone-img-list img { display: inline !important; vertical-align: middle; font-family: 'Mukta', sans-serif !important;
+        font-weight: 500;}
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <div class="info-officer">
+                    <div class="card">
+                                            </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Menu</h4>
+                <ul class="f-links">
+                                                        </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Useful Links</h4>
+                <ul class="f-links">
+                                            <li><a href="https://cded.tu.edu.np/"> Central Department of Education, Kirtipur</a></li>
+                                            <li><a href="https://tusc.tu.edu.np/"> TU Service Commission, Kirtipur, Kathmandu</a></li>
+                                            <li><a href="https://gsetu.edu.np/"> Graduate School of Education, Kirtipur, Kathmandu</a></li>
+                                            <li><a href="https://tu.edu.np/"> Office of the Registrar</a></li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Contact</h4>
+                <ul class="f-links">
+                    <li><i class="bi bi-envelope me-2"></i>
+                                                admin@foe.tu.edu.np/exam.admin@foe.tu.edu.np                                            </li>
+                    <li class="phone-img-list"><i class="bi bi-geo-alt me-2"></i>Balkhu, Nepal</li>
+                    <li><i class="bi bi-phone me-2"></i>
+                                                014331196                                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foter-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
+                    <p class="text-start">© 2026 All Rights Reserved</p>
+                    <p> <a href="https://websitedesignnepal.com/" target="_blank" style="color: #04293A">Website Design</a>
+                        by: <a href="https://www.youngminds.com.np/" style="color: #04293A" target="_blank">Young Minds</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--=================footer section ended=========-->
+
+<!-- All Scripts-->
+<script src="https://foe.tu.edu.np/assets/temp2/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://foe.tu.edu.np/assets/temp2/js/temp2.js"></script>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+</body>
+
+</html>

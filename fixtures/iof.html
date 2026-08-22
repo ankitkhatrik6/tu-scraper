@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://iof.tu.edu.np/assets/temp2/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://iof.tu.edu.np/assets/temp2/font/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://iof.tu.edu.np/assets/temp2/css/temp2.css">
+    <link rel="shortcut icon" href="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" type="image/x-icon">
+    <title>INSTITUTE OF FORESTRY</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://iof.tu.edu.np/assets/temp1/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://iof.tu.edu.np/assets/temp1/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://iof.tu.edu.np/assets/temp1/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://iof.tu.edu.np/assets/temp1/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://iof.tu.edu.np/assets/temp1/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <header class="header shadow">
+        <div class="header-middle text-center">
+        <div class="container">
+                <div class="row align-items-center m-display-none d-flex">
+                    <div class="col-10 d-flex">
+                        <!-- <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100"> -->
+                        <img src="https://iof.tu.edu.np/assets/logo.png" height="100"
+                        alt="">
+                        <div class="text-start mt-4">
+                            <h4>INSTITUTE OF FORESTRY</h4>
+                            <small><b></b></small>
+                            <p>Kirtipur, Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="header-middle-right">
+                            <ul class="header-middle-contact text-end d-flex">
+                                    <li class="me-2 social-media-icons"><a href="https://www.facebook.com/tuforestry" target="_blank"><i class="bi bi-facebook " style="color: #338CF1;font-size: 1.5rem;"></i></a>
+                                    </li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-twitter" style="color: #399BEF ;font-size: 1.5rem;"></i></a></li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-linkedin" style="color: #2366C2;font-size: 1.5rem;"></i></a></li>
+                                    <li class="dropdown show">
+                                        <div class="me-2 mt-1" id="shareButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-share-fill" style="color: #1b6ae0 ;font-size: 1.2rem;"></i>
+                                        </div>
+                                        <div class="dropdown-menu" aria-labelledby="shareButton">
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fiof.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-facebook me-2 text-primary"></i>Share on facebook
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://twitter.com/intent/tweet?text=Check+this+out!&url=https%3A%2F%2Fiof.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-twitter me-2 text-info"></i>Share on twitter
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fiof.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-linkedin me-2 text-primary"></i>Share on linkedin
+                                            </a>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100">
+                    <div class="text-start ms-2">
+                        <div class="title">INSTITUTE OF FORESTRY</div>
+                        <div class="address">Kirtipur, Kathmandu, Nepal</div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/" id="navbarDropdown" role="button" aria-expanded="false">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://iof.tu.edu.np/institute/calendar" id="navbarDropdown" role="button"
+                           aria-expanded="false">
+                            <img src="/assets/calendar.png" alt="" width="25">
+
+
+                        </a>
+                    </li>
+                                                                                                        <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-mortarboard-fill"></i> Academic Programs
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/bachelors-degree-program-2441">Bachelor (Undergraduate)
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/masters-programs-2435">Masters (Graduate)
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Doctor of Philosophy (PhD)</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="/colleges"
+                                               id="navbarDropdown"
+                                               role="button" aria-expanded="false"><i class="bi bi-diagram-3-fill"></i>
+                                                Campus/School
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://hc.tu.edu.np"
+                                                           class="text-white">IoF Hetauda Campus</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://pc.tu.edu.np"
+                                                           class="text-white">IoF Pokhara Campus</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://sofnrm.tu.edu.np"
+                                                           class="text-white">School of Forestry and Natural Resource Management</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/gallery"><i class="bi bi-images"></i> Gallery
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/downloads"><i class="bi bi-cloud-download-fill"></i> Downloads
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-newspaper"></i> News/Notices
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="active">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/notices">Notices
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/news">News
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/events">Events
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="https://nepjol.info/index.php/forestry"
+                                           target="_blank"><i class="bi bi-book"></i> IoF Journal
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-people-fill"></i> About
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/about-us-243">About-us
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/staffs">Staff
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-globe"></i> e-Services
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://entrance.iof.edu.np"
+                                                           class="text-white">Entrance</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://exam.iof.edu.np"
+                                                           class="text-white">Exam-services</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="https://iof.edu.np/conference"
+                                           target="_blank"><span class="position-relative">   <i class="bi bi-calendar bi-2x"></i>   <i class="bi bi-people-fill position-absolute top-50 start-50 translate-middle"></i> </span> Intl. Conference
+                                        </a>
+                                                                    </li>
+                                                                                                            </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="scroll-news">
+            <div class="container">
+                <div class="news-acroll-warpper position-relative">
+                    <div class="scroll-news-badge"><i class="bi bi-newspaper me-2"></i>Highlights</div>
+                    <marquee behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
+                        <ul>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">1</div>
+                                    <a href="https://iof.tu.edu.np/notices/14660">M.Sc. 2nd year 1st sem. Routine Published</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">2</div>
+                                    <a href="https://iof.tu.edu.np/notices/14592">Exam Schedule of B.Sc. Regular &amp; Makeup</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">3</div>
+                                    <a href="https://iof.tu.edu.np/notices/14206">स्नातकोत्तर  तह (M.Sc.) को Online  परीक्षा फाराम भर्ने सम्बन्धी सूचना</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">4</div>
+                                    <a href="https://iof.tu.edu.np/notices/14122">स्नातक तह  (B.Sc. Forestry) को Online फाराम भर्ने सम्बन्धी सूचना</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">5</div>
+                                    <a href="https://iof.tu.edu.np/notices/14109">स्नातकोत्तर तह नियमित तथा पुनः परीक्षाको नतिजा प्रकाशन सम्बन्धि सूचना ।</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">6</div>
+                                    <a href="https://iof.tu.edu.np/notices/13672">Notice: B.Sc. Forestry Entrance 2083</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">7</div>
+                                    <a href="https://iof.tu.edu.np/news/1152">B.Sc. Forestry Entrance 2083 Notice</a>
+                                </li>
+                                                    </ul>
+                    </marquee>
+                </div>
+
+            </div>
+        </div>
+    </header>
+        <div class="inner-banner"
+        style="background-image: url(/assets/temp1/images/not.png);">
+        <div class="container">
+            <div class="inner-banner-wrapper">
+                <div class="inner-banner-detail">
+                    <h4 class="title">Notices</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="https://iof.tu.edu.np">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Notices
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="notices-pg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="section-title mb-5 py-3">
+                        <h3><i class="bi bi-layout-text-window-reverse"></i> Notices</h3>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <form class="form" method="GET" action="https://iof.tu.edu.np/notices">
+                            <div class="row">
+                                <div class="col-md-12 form-group my-2">
+                                    <input class="form-control border border-secondary" type="title" placeholder="Title"
+                                        name="title" aria-label="Title" value="">
+                                </div>
+
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="start_date" id="start_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_start_date" placeholder="Publish Date From" aria-label="Publish Date"
+                                        data-field="#start_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="end_date" id="end_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_end_date" placeholder="Publish Date To" aria-label="Publish Date"
+                                        data-field="#end_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <select class="form-select border border-secondary" name="notice_type">
+                                                                                    <option value=""
+                                                selected>
+                                                Select Notice Type</option>
+                                                                                    <option value="753"
+                                                >
+                                                Result</option>
+                                                                                    <option value="755"
+                                                >
+                                                General</option>
+                                                                                    <option value="754"
+                                                >
+                                                Exam Form and Exam Schedule</option>
+                                                                                    <option value="839"
+                                                >
+                                                Entrance</option>
+                                                                            </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search me-2"></i>
+                                        Search</button>
+                                    <a href="https://iof.tu.edu.np/notices" class="btn btn-danger rounded-0"><i
+                                            class="bi bi-arrow-clockwise me-2 "></i>Refresh</a>
+                                </div>
+                            </div>
+                        </form>
+
+                        <hr>
+                    </div>
+                    <div class="notices-warpper rec-post">
+                        <ul>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-21</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14660">
+                                            <h5>M.Sc. 2nd year 1st sem. Routine Published</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-19</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14592">
+                                            <h5>Exam Schedule of B.Sc. Regular &amp; Makeup</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-04</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14206">
+                                            <h5>स्नातकोत्तर  तह (M.Sc.) को Online  परीक्षा फाराम भर्ने सम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-17</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14123">
+                                            <h5>सूची दर्ता गर्ने बारे सूचना ।।।</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-30</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14122">
+                                            <h5>स्नातक तह  (B.Sc. Forestry) को Online फाराम भर्ने सम्बन्धी सूचना</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-07-29</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iof.tu.edu.np/notices/14109">
+                                            <h5>स्नातकोत्तर तह नियमित तथा पुनः परीक्षाको नतिजा प्रकाशन सम्बन्धि सूचना ।</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                    </ul>
+                        <nav>
+        <ul class="pagination">
+            
+                            <li class="page-item disabled" aria-disabled="true">
+                    <span class="page-link">&laquo; Previous</span>
+                </li>
+            
+            
+                            <li class="page-item">
+                    <a class="page-link" href="https://iof.tu.edu.np/notices?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wNy0zMCAxMDo1OTo1MSIsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0" rel="next">Next &raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="sidebar">
+                        <h4 class="title">
+                            More News
+                        </h4>
+                        <hr>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-07-06</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iof.tu.edu.np/news/1152">
+                                        
+                                        B.Sc. Forestry Entrance 2083 Notice
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-06-01</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iof.tu.edu.np/news/1118">
+                                        
+                                        श्रद्धाञ्जली अर्पण तथ शोक सभा सम्पन्न
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-04-01</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iof.tu.edu.np/news/1055">
+                                        
+                                        Inception Workshop on “Socio-Ecological Dimensions of Community Forestry in Changing Context of Nepal” Concludes at IOF
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-03-23</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iof.tu.edu.np/news/1044">
+                                        
+                                        Presentation on advance fire behavior by Prof. Jason from University of New South Wales Bushfire
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-03-19</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iof.tu.edu.np/news/1034">
+                                        
+                                        Talk Programme on Himalayan Soil Science Successfully Completed
+                                    </a>
+                                </div>
+
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="back-to-top shadow">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<style>
+    .phone-img-list img { display: inline !important; vertical-align: middle; font-family: 'Mukta', sans-serif !important;
+        font-weight: 500;}
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <div class="info-officer">
+                    <div class="card">
+                                            </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Menu</h4>
+                <ul class="f-links">
+                                                        </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Useful Links</h4>
+                <ul class="f-links">
+                                            <li><a href="http://tu.edu.np"> Tribhuvan University</a></li>
+                                            <li><a href="http://iofpc.edu.np"> IOF Pokhara Campus</a></li>
+                                            <li><a href="http://iofhc.edu.np"> IOF Hetauda Campus</a></li>
+                                            <li><a href="https://www.mofe.gov.np/"> Ministry of Forests and Environment</a></li>
+                                            <li><a href="https://www.dofsc.gov.np/"> Department of Forests And Soil Conservation</a></li>
+                                            <li><a href="https://dnpwc.gov.np"> Department of National Parks and Wildlife Conservation</a></li>
+                                            <li><a href="https://frtc.gov.np/"> Forest Research and Training Center(FRTC)</a></li>
+                                            <li><a href="https://nast.gov.np/"> Nepal Academy of Science and Technology(NAST)</a></li>
+                                            <li><a href="https://www.wwfnepal.org/"> World Wide Fund For Nature (WWF Nepal)</a></li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Contact</h4>
+                <ul class="f-links">
+                    <li><i class="bi bi-envelope me-2"></i>
+                                                info@iof.tu.edu.np; dean@iof.tu.edu.np                                            </li>
+                    <li class="phone-img-list"><i class="bi bi-geo-alt me-2"></i>Kirtipur, Kathmandu, Nepal</li>
+                    <li><i class="bi bi-phone me-2"></i>
+                                                97714333926                                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foter-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
+                    <p class="text-start">© 2026 All Rights Reserved</p>
+                    <p> <a href="https://websitedesignnepal.com/" target="_blank" style="color: #04293A">Website Design</a>
+                        by: <a href="https://www.youngminds.com.np/" style="color: #04293A" target="_blank">Young Minds</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--=================footer section ended=========-->
+
+<!-- All Scripts-->
+<script src="https://iof.tu.edu.np/assets/temp2/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://iof.tu.edu.np/assets/temp2/js/temp2.js"></script>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+</body>
+
+</html>

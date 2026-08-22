@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://iaas.tu.edu.np/assets/temp2/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://iaas.tu.edu.np/assets/temp2/font/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://iaas.tu.edu.np/assets/temp2/css/temp2.css">
+    <link rel="shortcut icon" href="https://portal.tu.edu.np/medias/TULogoTIF-1_2024_04_22_15_22_43.jpg" type="image/x-icon">
+    <title>INSTITUTE OF AGRICULTURE AND ANIMAL SCIENCE</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://iaas.tu.edu.np/assets/temp1/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://iaas.tu.edu.np/assets/temp1/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://iaas.tu.edu.np/assets/temp1/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://iaas.tu.edu.np/assets/temp1/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://iaas.tu.edu.np/assets/temp1/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <header class="header shadow">
+        <div class="header-middle text-center">
+        <div class="container">
+                <div class="row align-items-center m-display-none d-flex">
+                    <div class="col-10 d-flex">
+                        <!-- <img src="https://portal.tu.edu.np/medias/TULogoTIF-1_2024_04_22_15_22_43.jpg" alt="" height="100"> -->
+                        <img src="https://iaas.tu.edu.np/assets/logo.png" height="100"
+                        alt="">
+                        <div class="text-start mt-4">
+                            <h4>INSTITUTE OF AGRICULTURE AND ANIMAL SCIENCE</h4>
+                            <small><b>TRIBHUVAN UNIVERSITY</b></small>
+                            <p>Kirtipur, Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="header-middle-right">
+                            <ul class="header-middle-contact text-end d-flex">
+                                    <li class="me-2 social-media-icons"><a href="https://www.facebook.com/IAASDEANOFFICE" target="_blank"><i class="bi bi-facebook " style="color: #338CF1;font-size: 1.5rem;"></i></a>
+                                    </li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-twitter" style="color: #399BEF ;font-size: 1.5rem;"></i></a></li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-linkedin" style="color: #2366C2;font-size: 1.5rem;"></i></a></li>
+                                    <li class="dropdown show">
+                                        <div class="me-2 mt-1" id="shareButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-share-fill" style="color: #1b6ae0 ;font-size: 1.2rem;"></i>
+                                        </div>
+                                        <div class="dropdown-menu" aria-labelledby="shareButton">
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fiaas.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-facebook me-2 text-primary"></i>Share on facebook
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://twitter.com/intent/tweet?text=Check+this+out!&url=https%3A%2F%2Fiaas.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-twitter me-2 text-info"></i>Share on twitter
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fiaas.tu.edu.np%2Fnotices"
+                                                target="_blank">
+                                                <i class="bi bi-linkedin me-2 text-primary"></i>Share on linkedin
+                                            </a>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="https://portal.tu.edu.np/medias/TULogoTIF-1_2024_04_22_15_22_43.jpg" alt="" height="100">
+                    <div class="text-start ms-2">
+                        <div class="title">INSTITUTE OF AGRICULTURE AND ANIMAL SCIENCE</div>
+                        <div class="address">Kirtipur, Kathmandu, Nepal</div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/" id="navbarDropdown" role="button" aria-expanded="false">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://iaas.tu.edu.np/institute/calendar" id="navbarDropdown" role="button"
+                           aria-expanded="false">
+                            <img src="/assets/calendar.png" alt="" width="25">
+
+
+                        </a>
+                    </li>
+                                                                                                        <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/institute-of-agricultural-and-animal-science-232" class="text-white">
+                                                
+                                                About
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/backgrouond-1773">Backgrounds
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/objectives-of-iaas-1774">Objectives of IAAS
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/organizational-structure-of-iaas-1775">Organizational Structure of IAAS
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/human-resource-contribution-1776">Human Resources Contribution
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/personnel-at-deans-office-1777">Personnel at Dean&#039;s Office
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/contact-us">Contact Us
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/campus-1804" class="text-white">
+                                                
+                                                Campuses
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/constituent-campus-1791">Constituent Campus
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/affiliated-college-1792">Affiliated Campus
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/deans-office-1803" class="text-white">
+                                                
+                                                Dean&#039;s Office
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/authorities-3003">Authorities
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/academics-1778">Academics
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/administration-1780">Administration
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/examinations-2397">Examinations
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/directorates-1781">Directorates
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </a>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/dorp-1782">Research, Publication and Incubation(RPI)</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/doe-1784">Planning and Monitoring (PM)</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/doe-1783">Extension, Placement and Consulting (EPC)</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/tu-veterinary-teaching-hospital-2351">T.U. Veterinary Teaching Hospital</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/post-graduate-program-2352">Post Graduate Program</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/notices"> Notices
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/resources-1805" class="text-white">
+                                                
+                                                Resources
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/gallery">Gallery
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/downloads">Download
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/institution-development-vision-and-action-plan-of-iaas-2350">Institution Development Vision and Action Plan of IAAS
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="/publications"
+                                               id="navbarDropdown"
+                                               role="button" aria-expanded="false">
+                                                Publications
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/journal-research-report-1793">Journals
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/journal-research-report-1793">Research Reports and Proceedings
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/research-paper-2895">Thesis/Dissertation Catalogue
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/course-curriculum-1790">Curriculum
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/general-publications-1794">General
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/academic-calendrers-1875" class="text-white">
+                                                
+                                                Academic Calendars
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/pg-program-1873">PG Program
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/ug-program-1874">UG Program
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="http://entranceiaas.tu.edu.np"
+                                           target="_blank"> Entrance Portal
+                                        </a>
+                                                                    </li>
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="https://live.gigaschoolerp.com/"
+                                           target="_blank"> PG EMIS
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a href="/pages/citizen-charter-2827" class="text-white">
+                                                
+                                                Services
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/charter-services-2828">Citizen Charter
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/placement-and-consulting-2846">Placement and Consulting
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                            </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+        <div class="inner-banner"
+        style="background-image: url(/assets/temp1/images/not.png);">
+        <div class="container">
+            <div class="inner-banner-wrapper">
+                <div class="inner-banner-detail">
+                    <h4 class="title">Notices</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="https://iaas.tu.edu.np">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Notices
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="notices-pg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="section-title mb-5 py-3">
+                        <h3><i class="bi bi-layout-text-window-reverse"></i> Notices</h3>
+                    </div>
+                    <div class="col-md-12 mb-5">
+                        <form class="form" method="GET" action="https://iaas.tu.edu.np/notices">
+                            <div class="row">
+                                <div class="col-md-12 form-group my-2">
+                                    <input class="form-control border border-secondary" type="title" placeholder="Title"
+                                        name="title" aria-label="Title" value="">
+                                </div>
+
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="start_date" id="start_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_start_date" placeholder="Publish Date From" aria-label="Publish Date"
+                                        data-field="#start_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <input type="hidden" name="end_date" id="end_date"
+                                        value="">
+                                    <input class="form-control border border-secondary datepicker" type="text"
+                                        name="nep_end_date" placeholder="Publish Date To" aria-label="Publish Date"
+                                        data-field="#end_date">
+                                </div>
+                                <div class="col-md-4 form-group my-2">
+                                    <select class="form-select border border-secondary" name="notice_type">
+                                                                                    <option value=""
+                                                selected>
+                                                Select Notice Type</option>
+                                                                                    <option value="611"
+                                                >
+                                                General Notices</option>
+                                                                                    <option value="622"
+                                                >
+                                                Academics</option>
+                                                                                    <option value="623"
+                                                >
+                                                Examinations</option>
+                                                                            </select>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-outline-success" type="submit"><i class="bi bi-search me-2"></i>
+                                        Search</button>
+                                    <a href="https://iaas.tu.edu.np/notices" class="btn btn-danger rounded-0"><i
+                                            class="bi bi-arrow-clockwise me-2 "></i>Refresh</a>
+                                </div>
+                            </div>
+                        </form>
+
+                        <hr>
+                    </div>
+                    <div class="notices-warpper rec-post">
+                        <ul>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-19</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14616">
+                                            <h5>परिक्षाफल प्रकाशित गरिएको सूचना ।</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-18</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14576">
+                                            <h5>मनराम छात्रवृत्ति सबन्धी सूचना ।</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-18</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14575">
+                                            <h5>पूनर्योग सम्बधी सूचना ।</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-18</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14574">
+                                            <h5>EXAMINATION SCHEDULE(B. Sc. Ag. 2nd Semester)</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-18</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14573">
+                                            <h5>EXAMINATION SCHEDULE(B.V.Sc. &amp; A.H. 2nd Semester)</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                            <div class="recent-post-wrapper shdow">
+                                    <div class="date">
+                                        <span class="nep_date">2026-08-11</span>
+                                    </div>
+                                    <div class="detail">
+                                        <a href="https://iaas.tu.edu.np/notices/14365">
+                                            <h5>Thesis को नतीजा प्रकाशित गरिएको बारे(Master)</h5>
+                                            
+                                        </a>
+                                    </div>
+                                </div>
+                                                    </ul>
+                        <nav>
+        <ul class="pagination">
+            
+                            <li class="page-item disabled" aria-disabled="true">
+                    <span class="page-link">&laquo; Previous</span>
+                </li>
+            
+            
+                            <li class="page-item">
+                    <a class="page-link" href="https://iaas.tu.edu.np/notices?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0xMSAyMDo0NDowMiIsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0" rel="next">Next &raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="sidebar">
+                        <h4 class="title">
+                            More News
+                        </h4>
+                        <hr>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-04</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iaas.tu.edu.np/news/1190">
+                                        
+                                        Institute of Agriculture &amp; Animal Science (IAAS) – Animal Health Training and Consultancy Service (AHTCS) MoU हस्ताक्षर
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-06-19</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iaas.tu.edu.np/news/1138">
+                                        
+                                        विद्यापरिषद् (Faculty Board) को बैठक सम्पन्न
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-05-12</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iaas.tu.edu.np/news/1097">
+                                        
+                                        Faculty Development Training
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-04-13</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iaas.tu.edu.np/news/1072">
+                                        
+                                        QAA Certification
+                                    </a>
+                                </div>
+
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-04-08</span>
+                                </div>
+                                <div class="detail ms-2">
+                                    <a href="https://iaas.tu.edu.np/news/1063">
+                                        
+                                        अन्तरक्रिया कार्यक्रम सम्पन्न ।
+                                    </a>
+                                </div>
+
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="back-to-top shadow">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<style>
+    .phone-img-list img { display: inline !important; vertical-align: middle; font-family: 'Mukta', sans-serif !important;
+        font-weight: 500;}
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <div class="info-officer">
+                    <div class="card">
+                                                    <img src="https://portal.tu.edu.np/medias/2025_12_16_13_37_48.jpg" class="card-img-top"
+                                alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title pt-3">Dr. Ram Bhajan Mandal</h5>
+                                <span>Asst. Dean (Admin.)&amp;Spokesperson</span>
+                                <span>ram.mandal@pakc.tu.edu.np</span>
+                                <span>
+                                    
+                                    
+                                </span>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Menu</h4>
+                <ul class="f-links">
+                                            <li>
+                                                            <a href="/pages/institute-of-agricultural-and-animal-science-232">About</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="/notices">Notices</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="/publications">Publications</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="/downloads">Downloads</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="/gallery">Gallery</a>
+                                                    </li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Useful Links</h4>
+                <ul class="f-links">
+                                            <li><a href="https://rc.tu.edu.np/"> Rampur Campus, Khairahani, Chitwan</a></li>
+                                            <li><a href="https://lac.tu.edu.np/"> Lamjung Campus, Sundarbazar, Lamjung</a></li>
+                                            <li><a href="https://pakc.tu.edu.np/"> Paklihawa Campus, Paklihawa, Rupandehi</a></li>
+                                            <li><a href="https://gac.tu.edu.np/"> Gauradaha Agriculture Campus, Gauradaha,Jhapa</a></li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Contact</h4>
+                <ul class="f-links">
+                    <li><i class="bi bi-envelope me-2"></i>
+                                                info@iaas.tu.edu.np                                            </li>
+                    <li class="phone-img-list"><i class="bi bi-geo-alt me-2"></i>Kirtipur, Kathmandu, Nepal</li>
+                    <li><i class="bi bi-phone me-2"></i>
+                                                4330600                                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foter-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
+                    <p class="text-start">© 2026 All Rights Reserved</p>
+                    <p> <a href="https://websitedesignnepal.com/" target="_blank" style="color: #04293A">Website Design</a>
+                        by: <a href="https://www.youngminds.com.np/" style="color: #04293A" target="_blank">Young Minds</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--=================footer section ended=========-->
+
+<!-- All Scripts-->
+<script src="https://iaas.tu.edu.np/assets/temp2/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://iaas.tu.edu.np/assets/temp2/js/temp2.js"></script>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,901 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://fohss.tu.edu.np/assets/temp2/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fohss.tu.edu.np/assets/temp2/font/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://fohss.tu.edu.np/assets/temp2/css/temp2.css">
+    <link rel="shortcut icon" href="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" type="image/x-icon">
+    <title>Faculty of Humanities and Social Sciences</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://fohss.tu.edu.np/assets/temp1/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://fohss.tu.edu.np/assets/temp1/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://fohss.tu.edu.np/assets/temp1/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://fohss.tu.edu.np/assets/temp1/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://fohss.tu.edu.np/assets/temp1/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+<body>
+    <header class="header shadow">
+    <div class="header-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
+                <div class="header-top-left d-flex align-items-center">
+                    <div class="mr-2"> <a href="https://tu.edu.np/"> <img src="https://fohss.tu.edu.np/assets/logo.png" height="30px"
+                        alt=""></a></div>
+                        <div class="header-top-left">
+                            <ul class="header-top-links">
+                                                                                                            <li class=""><a
+                                                href="https://tu.edu.np/news">NEWS</a></li>
+                                                                                                                                                <li class=""><a
+                                                href="https://tu.edu.np/notices">NOTICE</a></li>
+                                                                                                                                                <li class=""><a
+                                                href="https://tu.edu.np/events">EVENTS</a></li>
+                                                                                                                                                <li class="ht-drodown "><a href="">RESOURCES <i
+                                                    class="bi bi-caret-down-fill ms-2"></i></a>
+                                            <div class="header-top-dropdown">
+                                                <ul>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/downloads">DOWNLOADS</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/gallery">GALLERY</a>
+                                                        </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                                                                                                                                <li class=""><a
+                                                href="https://tu.edu.np/pages/scholorship-20">Scholarships</a></li>
+                                                                                                                                                <li class="ht-drodown "><a href="">Rules <i
+                                                    class="bi bi-caret-down-fill ms-2"></i></a>
+                                            <div class="header-top-dropdown">
+                                                <ul>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/downloads">Act</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/pages/rules-211">Rules</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/pages/laws-212">Laws</a>
+                                                        </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                                                                                    <li class="mx-2"><a href="https://tu.edu.np/./calendar" title="Calendar"><i
+                                            class="bi bi-calendar3"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
+                    <div class="header-top-right">
+                        <div class="header-top-search">
+                            <form class="d-flex m-0 align-items-center" method="GET" action="https://tu.edu.np/search"
+                            target="_blank">
+                            <input class="form-control" type="search" name="search" placeholder="Search"
+                            aria-label="Search" value="">
+                                <div>
+                                    <button class="btn text-warning" type="submit"><i class="bi bi-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle text-center">
+        <div class="container">
+                <div class="row align-items-center m-display-none d-flex">
+                    <div class="col-10 d-flex">
+                        <!-- <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100"> -->
+                        <img src="https://fohss.tu.edu.np/assets/logo.png" height="100"
+                        alt="">
+                        <div class="text-start mt-4">
+                            <h4>Faculty of Humanities and Social Sciences</h4>
+                            <small><b>Tribhuvan University</b></small>
+                            <p>Kirtipur, Kathmandu, Nepal</p>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="header-middle-right">
+                            <ul class="header-middle-contact text-end d-flex">
+                                    <li class="me-2 social-media-icons"><a href="https://www.facebook.com/tufohss/" target="_blank"><i class="bi bi-facebook " style="color: #338CF1;font-size: 1.5rem;"></i></a>
+                                    </li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-twitter" style="color: #399BEF ;font-size: 1.5rem;"></i></a></li>
+                                    <li class="me-2 social-media-icons"><a href=""><i class="bi bi-linkedin" style="color: #2366C2;font-size: 1.5rem;"></i></a></li>
+                                    <li class="dropdown show">
+                                        <div class="me-2 mt-1" id="shareButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-share-fill" style="color: #1b6ae0 ;font-size: 1.2rem;"></i>
+                                        </div>
+                                        <div class="dropdown-menu" aria-labelledby="shareButton">
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffohss.tu.edu.np%2Fnotices%2F14672"
+                                                target="_blank">
+                                                <i class="bi bi-facebook me-2 text-primary"></i>Share on facebook
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://twitter.com/intent/tweet?text=Check+this+out!&url=https%3A%2F%2Ffohss.tu.edu.np%2Fnotices%2F14672"
+                                                target="_blank">
+                                                <i class="bi bi-twitter me-2 text-info"></i>Share on twitter
+                                            </a>
+                                            <a class="dropdown-item text-primary"
+                                                href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffohss.tu.edu.np%2Fnotices%2F14672"
+                                                target="_blank">
+                                                <i class="bi bi-linkedin me-2 text-primary"></i>Share on linkedin
+                                            </a>
+                                        </div>
+                                    </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="d-flex align-items-center">
+                    <img src="https://portal.tu.edu.np/medias/logo_2022_07_05_07_00_46.png" alt="" height="100">
+                    <div class="text-start ms-2">
+                        <div class="title">Faculty of Humanities and Social Sciences</div>
+                        <div class="address">Kirtipur, Kathmandu, Nepal</div>
+                    </div>
+                </div>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"><i class="bi bi-list"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/" id="navbarDropdown" role="button" aria-expanded="false">
+                            <i class="bi bi-house-fill"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://fohss.tu.edu.np/institute/calendar" id="navbarDropdown" role="button"
+                           aria-expanded="false">
+                            <img src="/assets/calendar.png" alt="" width="25">
+
+
+                        </a>
+                    </li>
+                                                                                                        <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="https://fohss.tu.edu.np/"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                 About Us
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/introduction-225">Introduction
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/contact-us">Contact Us
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="https://fohss.tu.edu.np/"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-mortarboard"></i> Programs
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">BA</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/ba-program-1598">Introduction</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=14"
+                                                                        target="_blank">Syllabus</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">BCA</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item"
+                                                                        href="/pages/bca-programm-1597">Introduction</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=352"
+                                                                        target="_blank">Syllabus</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">PGD</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">MCA</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">M.A.</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="#"
+                                                                        target="_blank">Introduction</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=15"
+                                                                        target="_blank">Syllabus</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">MPhil</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">PhD.</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            <li class="nav-item dropdown  text-wrap">
+                                <div class="nav-link dropdown-toggle d-flex justify-content-between" id="navbarDropdown" role="button" aria-expanded="false">
+                                   
+                                    <a class="text-white" href="/pages/central-departments-hod-228">
+                                    Dept./ Self-Program
+                                </a>
+                                   
+                                </div>
+                                <ul class="dropdown-menu lft " aria-labelledby="navbarDropdown"
+                                    style="width: 800px !important; justify-content: space-around !important;">
+                                    <div class="d-lg-flex">
+                                                                                                                                    <ul>
+                                                    <li class=" text-center"></li>
+                                                                                                            <li class="text-wrap">
+                                                                                                                           <a class="dropdown-item text-wrap"
+                                                               href="/pages/central-departments-hod-228">Central departments</a>
+                                                                                                                       </li>
+                                                                                                    </ul>
+                                                                                                                                                                                                                                                                    <ul>
+                                                    <li class=" text-center"></li>
+                                                                                                            <li class="text-wrap">
+                                                                                                                           <a class="dropdown-item text-wrap"
+                                                               href="/pages/constituent-campus-2467">Constituent Colleges</a>
+                                                                                                                       </li>
+                                                                                                    </ul>
+                                                                                                                                                                                <ul>
+                                                    <li class=" text-center"></li>
+                                                                                                            <li class="text-wrap">
+                                                                                                                           <a class="dropdown-item text-wrap"
+                                                               href="/pages/central-department-of-anthropology-224">Affiliated Colleges</a>
+                                                                                                                       </li>
+                                                                                                    </ul>
+                                                                                                                        </div>
+                                </ul>
+                            </li>
+                                                                                                                                <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-diagram-3"></i> Organization
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Organizational Structure</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/test-1633">Faculty
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/faculty-board-2450">Faculty Board
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/examination-committee-2466">Examination Committee
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/research-committee-2451">Research Committee
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Sections</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="#"
+                                                                        target="_blank">Administrative</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="#"
+                                                                        target="_blank">PhD Section</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Human Resource</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="https://exam.tufohss.edu.np/"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-pencil-square"></i> Examination
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://exam.tufohss.edu.np/"
+                                                           class="text-white">Semester Exam Form (Online)</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://entrance.tufohss.edu.np/"
+                                                           class="text-white">Entrance Exam form (Online)</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/notices"><i class="bi bi-clipboard2"></i> Notices
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                <i class="bi bi-stack-overflow"></i> Resources
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://fohss.tu.edu.np/downloads?category=397"
+                                                           class="text-white">Model Questions</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/events">Gallery
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Forms</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=16"
+                                                                        target="_blank">Administrative</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=17"
+                                                                        target="_blank">PhD Section</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">Syllabus</a>
+                                                                                                                    <i class="bi bi-arrow-right ms-4"></i>
+                                                                                                            </div>
+                                                                                                                                                    <ul class="inner-menu ms-lg-5">
+                                                                                                                                                                                    <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=14"
+                                                                        target="_blank">4yr_BA_Syllabus</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=15"
+                                                                        target="_blank">M A Syllabus</a>
+                                                                </li>
+                                                                                                                                                                                                                                                <li class=""><a
+                                                                        class="dropdown-item" href="https://fohss.tu.edu.np/downloads?category=352"
+                                                                        target="_blank">BCA Syllabus</a>
+                                                                </li>
+                                                                                                                                                                        </ul>
+                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="https://fohss.tu.edu.np/downloads?category=717"
+                                                           class="text-white">कार्यविधि (Karyavidhi)</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                                                            <a class="nav-link active " aria-current="page"
+                                           href="/downloads"><i class="bi bi-download"></i> Downloads
+                                        </a>
+                                                                    </li>
+                                                                                                                                                            <li class="nav-item dropdown  ">
+                                                                            <div class="nav-link dropdown-toggle d-flex justify-content-between"
+                                             id="navbarDropdown" role="button" aria-expanded="false">
+                                            <a class="text-white" href="#"
+                                               id=" navbarDropdown" role="button" aria-expanded="false" target="_blank">
+                                                 Inquiry
+                                            </a>
+                                            <div class="second-level-menu-toogle d-lg-none text-white">
+                                                <i class="bi bi-arrow-right"></i>
+                                            </div>
+                                        </div>
+                                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/inquiry-examination-2150">For examination
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/inquiry-administrative-2151">For Administrative
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <div class="dropdown-item text-wrap d-flex justify-content-between">
+
+                                                        <a href="#"
+                                                           class="text-white">For Acounting</a>
+                                                                                                            </div>
+                                                                                                                                            </li>
+
+                                                                                    <li class="">
+                                                                                                    <a class="dropdown-item text-wrap"
+                                                       href="/pages/inquiry-phd-2152">For PhD
+                                                                                                            </a>
+                                                                                                                                            </li>
+
+                                                                            </ul>
+                                </li>
+
+                                                                                                                            
+                                <li class="nav-item">
+                                    
+                                        <a class="nav-link active" aria-current="page" href="#"
+                                           target="_blank"> Research
+                                        </a>
+                                                                    </li>
+                                                                                                            </ul>
+            </div>
+        </div>
+    </nav>
+            <div class="scroll-news">
+            <div class="container">
+                <div class="news-acroll-warpper position-relative">
+                    <div class="scroll-news-badge"><i class="bi bi-newspaper me-2"></i>Highlights</div>
+                    <marquee behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
+                        <ul>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">1</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14672">MA IV Semester Results (Rural Development, Psychology, Political Science and Social Work) 2023 Batch</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">2</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14647">एमफिल–पीएचडी भर्ना सम्बन्धी थप सूचना !</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">3</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14631">स्नातकोत्तर तहको छुट परीक्षा फाराम भर्ने सम्बन्धित सूचना ।</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">4</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14558">BCA, Entrance Result - 2026</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">5</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14495">स्नातकोत्तर तहको तेस्रो सेमेस्टरको परीक्षा तालिका संसोधन भएको सम्बन्धमा ।</a>
+                                </li>
+                                                            <li class="me-4">
+                                    <div class="scroll-index">6</div>
+                                    <a href="https://fohss.tu.edu.np/notices/14403">पाठ्यक्रममा आधारित विद्यावारिधि कार्यक्रम अन्तर्गत अनुसन्धानरत शोधार्थीहरूका लागि अभिमुखीकरण कार्यक्रम सञ्चालन सम्बन्धी सूचना !</a>
+                                </li>
+                                                    </ul>
+                    </marquee>
+                </div>
+
+            </div>
+        </div>
+    </header>
+        <div class="inner-banner" style="background-image: url(https://portal.tu.edu.np);">
+        <div class="container">
+            <div class="inner-banner-wrapper">
+                <div class="inner-banner-detail">
+                    <h4 class="title">MA IV Semester Results (Rural Development, Psychology, Political Science and Social Work) 2023 Batch</h4>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                Notices
+                            </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="detail-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">
+                    <div class="detail-page-inner">
+                        <h4 class="title">MA IV Semester Results (Rural Development, Psychology, Political Science and Social Work) 2023 Batch</h4>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div>
+                                <div class="badge date">
+                                    <i class="bi bi-calendar me-2"></i><span
+                                        class="nep_date">2026-08-21</span>
+                                </div>
+                                
+                            </div>
+
+                                                    </div>
+                        <hr />
+                        <div class="ck-table">
+                            <p>* प्रकाशित नतिजामा कुनै कारणबस छुट हुन गएको वा re-totaling गर्नु पर्ने भएमा मिति २०८३ भदौ २५ गते भित्र मानविकी तथा सामाजिक शास्त्र सङ्काय, डीनको कार्यालयमा आई निवदेन दिनु पर्नेछ ।<br />
+* प्रकाशित नतिजामा भूलबस कुनै त्रुटी हुन गएमा उक्त नतिजा सच्याउने अधिकार मानविकी तथा सामाजिक शास्त्र सङ्काय, डीनको कार्यालयमा सुरक्षित रहनेछ ।</p>
+                        </div>
+                    </div>
+                                            <hr>
+                        <section class="inner-downloads">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                        <div class="section-title mb-5 py-3">
+                                            <h3><i class="bi bi-download"></i> Files</h3>
+                                        </div>
+                                        <div class="download-wrapper ">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">S.N</th>
+                                                        <th scope="col">Name</th>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Download</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                                                                            <tr>
+                                                            <th scope="row">1</th>
+                                                            <td> Political Science, MA, 4th Semester (2023 Batch)</td>
+                                                            <td>
+                                                                pdf
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                                <a href="https://portal.tu.edu.np/notice/14672/1787314549.pdf"
+                                                                    download> <i class="bi bi-cloud-arrow-down"> </i></a>
+                                                            </td>
+                                                        </tr>
+                                                                                                            <tr>
+                                                            <th scope="row">2</th>
+                                                            <td> Psychology, MA, 4th Semester (2023 Batch)</td>
+                                                            <td>
+                                                                pdf
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                                <a href="https://portal.tu.edu.np/notice/14672/1787314564.pdf"
+                                                                    download> <i class="bi bi-cloud-arrow-down"> </i></a>
+                                                            </td>
+                                                        </tr>
+                                                                                                            <tr>
+                                                            <th scope="row">3</th>
+                                                            <td> Rural Development, MA, 4th Semester (2023 Batch)</td>
+                                                            <td>
+                                                                pdf
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                                <a href="https://portal.tu.edu.np/notice/14672/1787314576.pdf"
+                                                                    download> <i class="bi bi-cloud-arrow-down"> </i></a>
+                                                            </td>
+                                                        </tr>
+                                                                                                            <tr>
+                                                            <th scope="row">4</th>
+                                                            <td> Social Work, MA, 4th Semester (2023 Batch)</td>
+                                                            <td>
+                                                                pdf
+                                                            </td>
+
+                                                            <td class="text-center">
+                                                                <a href="https://portal.tu.edu.np/notice/14672/1787314589.pdf"
+                                                                    download> <i class="bi bi-cloud-arrow-down"> </i></a>
+                                                            </td>
+                                                        </tr>
+                                                                                                    </tbody>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                                    </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                    <div class="sidebar">
+                        <h4 class="title">More Notices</h4>
+                        <hr />
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-20</span>                                
+                                 </div>
+                                <div class="detail ms-2">
+                                    <a href="https://fohss.tu.edu.np/notices/14647">
+                                        एमफिल–पीएचडी भर्ना सम्बन्धी थप सूचना !
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-20</span>                                
+                                 </div>
+                                <div class="detail ms-2">
+                                    <a href="https://fohss.tu.edu.np/notices/14631">
+                                        स्नातकोत्तर तहको छुट परीक्षा फाराम भर्ने सम्बन्धित...
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-18</span>                                
+                                 </div>
+                                <div class="detail ms-2">
+                                    <a href="https://fohss.tu.edu.np/notices/14558">
+                                        BCA, Entrance Result - 2026
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-17</span>                                
+                                 </div>
+                                <div class="detail ms-2">
+                                    <a href="https://fohss.tu.edu.np/notices/14495">
+                                        स्नातकोत्तर तहको तेस्रो सेमेस्टरको परीक्षा तालिका...
+                                    </a>
+                                </div>
+                            </div>
+                                                    <div class="sidebar-wrapper d-flex align-items-center mb-3">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-14</span>                                
+                                 </div>
+                                <div class="detail ms-2">
+                                    <a href="https://fohss.tu.edu.np/notices/14441">
+                                        BCA I (2025), BCA III (2024) and BCA VI (Retotalin...
+                                    </a>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="back-to-top shadow">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<style>
+    .phone-img-list img { display: inline !important; vertical-align: middle; font-family: 'Mukta', sans-serif !important;
+        font-weight: 500;}
+</style>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <div class="info-officer">
+                    <div class="card">
+                                            </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Menu</h4>
+                <ul class="f-links">
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=17">PhD Document</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=16">Administrative Document</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=14">4 yrs BA Syllabus</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=15">MA Syllabus</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=352">BCA Syllabus</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=545">Examination Form</a>
+                                                    </li>
+                                            <li>
+                                                            <a href="https://fohss.tu.edu.np/downloads?category=397">MCA Entrance Model Question</a>
+                                                    </li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Useful Links</h4>
+                <ul class="f-links">
+                                            <li><a href="https://cdnb.edu.np/"> Central Dept of Nepalbhasa, e-library</a></li>
+                                            <li><a href="https://tucl.tu.edu.np/"> TU Central Library</a></li>
+                                            <li><a href="https://tucdc.edu.np/index.php"> Curriculum Development Center</a></li>
+                                    </ul>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+                <h4 class="f-title mb-4">Contact</h4>
+                <ul class="f-links">
+                    <li><i class="bi bi-envelope me-2"></i>
+                                                info@fohss.tu.edu.np                                            </li>
+                    <li class="phone-img-list"><i class="bi bi-geo-alt me-2"></i>Kirtipur, Kathmandu, Nepal</li>
+                    <li><i class="bi bi-phone me-2"></i>
+                                                4333980                                            </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="foter-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 d-flex justify-content-between">
+                    <p class="text-start">© 2026 All Rights Reserved</p>
+                    <p> <a href="https://websitedesignnepal.com/" target="_blank" style="color: #04293A">Website Design</a>
+                        by: <a href="https://www.youngminds.com.np/" style="color: #04293A" target="_blank">Young Minds</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--=================footer section ended=========-->
+
+<!-- All Scripts-->
+<script src="https://fohss.tu.edu.np/assets/temp2/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://fohss.tu.edu.np/assets/temp2/js/temp2.js"></script>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+</body>
+
+</html>

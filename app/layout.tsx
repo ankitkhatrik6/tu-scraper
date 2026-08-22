@@ -2,8 +2,24 @@ import type {Metadata} from 'next';
 import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
-  title: 'tu-scraper | Tribhuvan University Notices Scraper NPM Package',
-  description: 'Production-ready TypeScript scraper and npm package to scrape official Tribhuvan University notices across all 8 verified faculties and institutes.',
+  title: 'TU Scraper',
+  description: 'A production-ready TypeScript scraper and npm package for fetching official Tribhuvan University (TU) notices across all 8 verified faculties and institutes in Nepal.',
+  keywords: ['TU Scraper', 'Tribhuvan University', 'Notices', 'Scraper', 'Nepal', 'IOST', 'IOE', 'IOM', 'NPM Package', 'TypeScript'],
+  authors: [{ name: 'Ankit Khatri KC' }],
+  creator: 'Ankit Khatri KC',
+  openGraph: {
+    title: 'TU Scraper - Official TU Notices Scraper',
+    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, IOM, FOHSS, and more.',
+    type: 'website',
+    images: [{ url: '/preview.png', width: 1200, height: 630, alt: 'TU Scraper Preview' }],
+    siteName: 'TU Scraper',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'TU Scraper - Official TU Notices Scraper',
+    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, IOM, FOHSS, and more.',
+    images: ['/preview.png'],
+  },
   icons: {
     icon: [
       { url: '/tulogo.png', type: 'image/png' },
@@ -11,12 +27,6 @@ export const metadata: Metadata = {
     ],
     apple: [{ url: '/tulogo.png', type: 'image/png' }],
     shortcut: ['/tulogo.png'],
-  },
-  openGraph: {
-    title: 'tu-scraper - Official TU Notices Scraper',
-    description: 'Production-ready TypeScript scraper for Tribhuvan University notices.',
-    type: 'website',
-    images: [{ url: '/tulogo.png', width: 512, height: 512, alt: 'tu-scraper logo' }],
   },
 };
 

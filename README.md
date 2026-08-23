@@ -24,13 +24,13 @@
 
 ---
 
-## 📌 Overview
+## Overview
 
 **`tu-scraper`** provides a clean, unified, zero-boilerplate API for developers, students, and institutions to programmatically access official Tribhuvan University notices. It eliminates manual HTML parsing, handles faculty-specific DOM variance, provides in-memory caching, and standardizes notice records into strict TypeScript interfaces.
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ```bash
 # npm
@@ -48,7 +48,7 @@ bun add tu-scraper
 
 ---
 
-## 📖 Quick Start
+## Quick Start
 
 ```typescript
 import { getNotices, getLatest, searchNotices } from "tu-scraper";
@@ -70,7 +70,7 @@ const examNotices = await searchNotices("exam", "fohss");
 
 ---
 
-## 🏛️ Supported Sources (8 Official Portals)
+## Supported Sources (8 Official Portals)
 
 `tu-scraper` strictly targets only the 8 verified official Tribhuvan University portals:
 
@@ -88,7 +88,7 @@ const examNotices = await searchNotices("exam", "fohss");
 
 ---
 
-## 📦 Return Type (`Notice`)
+## Return Type (`Notice`)
 
 Every scraper normalizes results into the standard `Notice` contract:
 
@@ -113,7 +113,7 @@ export interface Notice {
 
 ---
 
-## 🛠️ Core API Reference
+## Core API Reference
 
 ### `getNotices(source, options?)`
 
@@ -186,7 +186,7 @@ export interface ScrapeOptions {
 
 ---
 
-## 🚨 Error Handling
+## Error Handling
 
 `tu-scraper` exports clear, typed errors:
 
@@ -215,7 +215,7 @@ try {
 
 ---
 
-## ⚡ Examples
+## Examples
 
 ### 1. Daily Telegram / Discord Bot Notification
 
@@ -261,7 +261,7 @@ app.listen(8080, () => console.log("TU Notices API running on port 8080"));
 
 ---
 
-## 🧪 Testing
+## Testing
 
 The package includes a comprehensive test suite with 20 unit tests covering:
 - All 8 source adapters using real saved HTML fixtures
@@ -280,6 +280,6 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 MIT © [Ankit Khatri KC](https://github.com/ankitkhatrik6)

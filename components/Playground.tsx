@@ -241,6 +241,7 @@ export function Playground({ darkMode, initialSource = 'iost' }: PlaygroundProps
       );
       const data = await res.json();
       if (data.success && data.data) {
+        // detail API response may have a generic title (like faculty name), so we preserve the originally scraped valid title
         const enrichedNotice = { ...data.data, title: notice.title || data.data.title };
         setSelectedNotice(enrichedNotice);
         // Also enrich this notice in the results list so PDF and image indicators update

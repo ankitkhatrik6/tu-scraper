@@ -23,15 +23,32 @@ export default function Page() {
   const [searchModalOpen, setSearchModalOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
+
+  // Initialize theme from localStorage
+  useEffect(() => {
+    setIsMounted(true);
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      setDarkMode(true);
+    } else if (savedTheme === 'light') {
+      setDarkMode(false);
+    } else if (window.matchMedia) {
+      setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+    }
+  }, []);
 
   // Sync dark class with document element for Tailwind dark utilities
   useEffect(() => {
+    if (!isMounted) return;
     if (darkMode) {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
-  }, [darkMode]);
+  }, [darkMode, isMounted]);
 
   // Keyboard shortcut '/' or 'Cmd+K' to open search
   useEffect(() => {

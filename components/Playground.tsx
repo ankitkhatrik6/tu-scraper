@@ -241,12 +241,13 @@ export function Playground({ darkMode, initialSource = 'iost' }: PlaygroundProps
       );
       const data = await res.json();
       if (data.success && data.data) {
-        setSelectedNotice(data.data);
+        const enrichedNotice = { ...data.data, title: notice.title || data.data.title };
+        setSelectedNotice(enrichedNotice);
         // Also enrich this notice in the results list so PDF and image indicators update
         setResults((prev) =>
           prev.map((item) =>
             item.url === notice.url || (item.id === notice.id && item.source === notice.source)
-              ? { ...item, ...data.data }
+              ? { ...item, ...enrichedNotice, title: item.title }
               : item
           )
         );

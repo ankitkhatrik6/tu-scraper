@@ -1,4 +1,5 @@
 import * as cheerio from 'cheerio';
+import NepaliDate from 'nepali-date-converter';
 import { Notice, NoticeAttachment, NoticeDetail, NoticeSource } from '../types';
 
 /**
@@ -506,9 +507,40 @@ export function parseNoticeDetail(
     'Tribhuvan University Notice';
 
   // Extract Dates
-  const nepaliDate = cleanText($('.nep_date, .date-nepali').first().text()) || undefined;
+  let nepaliDate = cleanText($('.nep_date, .date-nepali').first().text()) || undefined;
   const englishDate = cleanText($('.date-eng, .english-date').first().text()) || undefined;
   const generalDate = nepaliDate || englishDate || extractDate($('body'));
+
+  // The TU portal often incorrectly puts the AD date inside the nepali date field.
+  // We can attempt to convert any AD-looking date to a real BS date.
+  if (nepaliDate) {
+    const match = nepaliDate.match(/\b(20\d{2})[-/.]\d{1,2}[-/.]\d{1,2}\b/);
+    if (match) {
+      const year = parseInt(match[1], 10);
+      if (year < 2050) { // Definitely an AD year
+        try {
+          const d = new Date(nepaliDate);
+          if (!isNaN(d.getTime())) {
+            nepaliDate = new NepaliDate(d).format('YYYY-MM-DD');
+          }
+        } catch { /* ignore */ }
+      }
+    }
+  } else if (englishDate) {
+    // If no nepali date was found at all, but we have an english AD date, generate the BS date
+    const match = englishDate.match(/\b(20\d{2})[-/.]\d{1,2}[-/.]\d{1,2}\b/);
+    if (match) {
+      const year = parseInt(match[1], 10);
+      if (year < 2050) {
+        try {
+          const d = new Date(englishDate);
+          if (!isNaN(d.getTime())) {
+            nepaliDate = new NepaliDate(d).format('YYYY-MM-DD');
+          }
+        } catch { /* ignore */ }
+      }
+    }
+  }
 
   // Extract body content
   const content =

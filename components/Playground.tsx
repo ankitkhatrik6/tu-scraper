@@ -274,7 +274,7 @@ export function Playground({ darkMode, initialSource = 'iost' }: PlaygroundProps
             );
             const data = await res.json();
             if (data.success && data.data) {
-              return { ...n, ...data.data };
+              return { ...n, ...data.data, title: n.title || data.data.title };
             }
           } catch {}
           return n;

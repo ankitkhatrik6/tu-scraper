@@ -18,7 +18,7 @@ export class InvalidSourceError extends TuScrapperError {
   public readonly invalidSource: string;
   public readonly allowedSources: string[];
 
-  constructor(source: string, allowed: string[] = ['iost', 'fohss', 'ioe', 'iom', 'iaas', 'iof', 'foe', 'fol', 'all']) {
+  constructor(source: string, allowed: string[] = ['iost', 'fohss', 'ioe', 'ac', 'iaas', 'iof', 'foe', 'fol', 'all']) {
     super(
       `Invalid notice source "${source}". Supported sources are: ${allowed.map(s => `"${s}"`).join(', ')}.`
     );

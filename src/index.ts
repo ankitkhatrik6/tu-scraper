@@ -6,7 +6,7 @@ import { scrapeFol, FOL_URL } from './sources/fol';
 import { scrapeIaas, IAAS_URL } from './sources/iaas';
 import { scrapeIoe, IOE_URL } from './sources/ioe';
 import { scrapeIof, IOF_URL } from './sources/iof';
-import { scrapeIom, IOM_URL } from './sources/iom';
+import { scrapeAc, AC_URL } from './sources/ac';
 import { scrapeIost, IOST_URL } from './sources/iost';
 import { Notice, NoticeAttachment, NoticeDetail, NoticeSource, ScrapeOptions, SourceMeta, SourceQuery } from './types';
 import { fetchHtml } from './utils/http';
@@ -26,7 +26,7 @@ export const SOURCES: readonly NoticeSource[] = [
   'iost',
   'fohss',
   'ioe',
-  'iom',
+  'ac',
   'iaas',
   'iof',
   'foe',
@@ -73,17 +73,17 @@ export const SOURCE_METADATA: Record<NoticeSource, SourceMeta> = {
     verified: true,
     notes: 'Official engineering notices and entrance announcements',
   },
-  iom: {
-    id: 'iom',
-    code: 'IOM',
-    name: 'Institute of Medicine',
-    nepaliName: 'चिकित्सा शास्त्र अध्ययन संस्थान',
-    url: IOM_URL,
-    baseUrl: 'https://iom.tu.edu.np',
-    category: 'Institute',
-    location: 'Maharajgunj, Kathmandu',
+  ac: {
+    id: 'ac',
+    code: 'AC',
+    name: 'Amrit Science Campus',
+    nepaliName: 'अमृत साइन्स क्याम्पस',
+    url: AC_URL,
+    baseUrl: 'https://ac.tu.edu.np',
+    category: 'Campus',
+    location: 'Lainchaur, Kathmandu',
     verified: true,
-    notes: 'Official medical faculty and entrance notices portal',
+    notes: 'Official portal for Amrit Science Campus',
   },
   iaas: {
     id: 'iaas',
@@ -142,7 +142,7 @@ const SCRAPER_MAP: Record<NoticeSource, (options?: ScrapeOptions) => Promise<Not
   iost: scrapeIost,
   fohss: scrapeFohss,
   ioe: scrapeIoe,
-  iom: scrapeIom,
+  ac: scrapeAc,
   iaas: scrapeIaas,
   iof: scrapeIof,
   foe: scrapeFoe,
@@ -173,7 +173,7 @@ export function clearCache(): void {
 /**
  * Fetch official Tribhuvan University notices from a specific source or from all 8 sources.
  *
- * @param source "iost" | "fohss" | "ioe" | "iom" | "iaas" | "iof" | "foe" | "fol" | "all"
+ * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all"
  * @param options Optional scrape settings (timeout, cache bypass, user-agent)
  * @returns Array of normalized Notice objects
  * @throws {InvalidSourceError} if an unrecognized source is provided
@@ -239,7 +239,7 @@ export async function getNotices(source: SourceQuery, options?: ScrapeOptions): 
  * Fetch the latest single notice from a source or across all sources.
  * If available, returns enriched detail with scanned images and PDF attachments.
  *
- * @param source "iost" | "fohss" | "ioe" | "iom" | "iaas" | "iof" | "foe" | "fol" | "all"
+ * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all"
  * @param options Optional scrape settings
  * @returns The most recent Notice/NoticeDetail or null if no notices exist
  */

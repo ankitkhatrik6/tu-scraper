@@ -5,7 +5,7 @@ export type NoticeSource =
   | 'iost'
   | 'fohss'
   | 'ioe'
-  | 'iom'
+  | 'ac'
   | 'iaas'
   | 'iof'
   | 'foe'
@@ -79,7 +79,7 @@ export interface SourceMeta {
   nepaliName: string;
   url: string;
   baseUrl: string;
-  category: 'Institute' | 'Faculty';
+  category: 'Institute' | 'Faculty' | 'Campus';
   location: string;
   verified: boolean;
   notes?: string;

@@ -4,12 +4,12 @@ import './globals.css'; // Global styles
 export const metadata: Metadata = {
   title: 'TU Scraper - Official Tribhuvan University Notices API',
   description: 'A production-ready TypeScript scraper and npm package for fetching official Tribhuvan University (TU) notices across all 8 verified faculties and institutes in Nepal.',
-  keywords: ['TU Scraper', 'Tribhuvan University', 'Notices API', 'Scraper', 'Nepal', 'IOST', 'IOE', 'IOM', 'NPM Package', 'TypeScript', 'TU Notice Scraper', 'TU API'],
+  keywords: ['TU Scraper', 'Tribhuvan University', 'Notices API', 'Scraper', 'Nepal', 'IOST', 'IOE', 'AC', 'NPM Package', 'TypeScript', 'TU Notice Scraper', 'TU API'],
   authors: [{ name: 'Ankit Khatri KC' }],
   creator: 'Ankit Khatri KC',
   openGraph: {
     title: 'TU Scraper - Official TU Notices Scraper API',
-    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, IOM, FOHSS, and more.',
+    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, AC, FOHSS, and more.',
     type: 'website',
     url: 'https://tu-scraper.js.org',
     images: [{ url: '/preview.png', width: 1200, height: 630, alt: 'TU Scraper Preview' }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'TU Scraper - Official TU Notices Scraper',
-    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, IOM, FOHSS, and more.',
+    description: 'A production-ready TypeScript scraper for Tribhuvan University notices. Fetch results from IOST, IOE, AC, FOHSS, and more.',
     images: ['/preview.png'],
   },
   icons: {

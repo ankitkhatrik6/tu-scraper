@@ -158,7 +158,7 @@ export default function Page() {
       title: 'Supported Portals Directory (8 Sources)',
       page: 'portals' as MainNavPage,
       category: 'Portals',
-      desc: 'IOST, IOE, IOM, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
+      desc: 'IOST, IOE, AC, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
     },
   ];
 

@@ -53,7 +53,7 @@ export async function runAllTests() {
   console.log('--- Suite 1: Source Validation & Metadata ---');
   await runTest('Supports exactly the 8 specified official sources', () => {
     assertEqual(SOURCES.length, 8);
-    const expected = ['iost', 'fohss', 'ioe', 'iom', 'iaas', 'iof', 'foe', 'fol'];
+    const expected = ['iost', 'fohss', 'ioe', 'ac', 'iaas', 'iof', 'foe', 'fol'];
     for (const src of expected) {
       assert(SOURCES.includes(src as NoticeSource), `SOURCES should include ${src}`);
     }
@@ -115,8 +115,8 @@ export async function runAllTests() {
       const notices = await getNotices(src, { htmlFixture: fixtureHtml, bypassCache: true });
       assert(Array.isArray(notices), 'Notices must be an array');
 
-      if (src !== 'iom') {
-        // IOM current view may be empty or have no notices
+      if (src !== 'ac') {
+        // AC current view may be empty or have no notices
         assert(notices.length > 0, `Expected parsed notices for ${src}, got ${notices.length}`);
       }
 

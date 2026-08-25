@@ -79,7 +79,7 @@ const examNotices = await searchNotices("exam", "fohss");
 | `iost` | Institute of Science and Technology | Institute | [https://iost.tu.edu.np/notices](https://iost.tu.edu.np/notices) |
 | `fohss` | Faculty of Humanities and Social Sciences | Faculty | [https://fohss.tu.edu.np/notices](https://fohss.tu.edu.np/notices) |
 | `ioe` | Institute of Engineering | Institute | [https://ioe.tu.edu.np/notices](https://ioe.tu.edu.np/notices) |
-| `iom` | Institute of Medicine | Institute | [https://iom.tu.edu.np/notices](https://iom.tu.edu.np/notices) |
+| `ac` | Amrit Science Campus | Campus | [https://ac.tu.edu.np/notices](https://ac.tu.edu.np/notices) |
 | `iaas` | Institute of Agriculture and Animal Science | Institute | [https://iaas.tu.edu.np/notices](https://iaas.tu.edu.np/notices) |
 | `iof` | Institute of Forestry | Institute | [https://iof.tu.edu.np/notices](https://iof.tu.edu.np/notices) |
 | `foe` | Faculty of Education | Faculty | [https://foe.tu.edu.np/notices](https://foe.tu.edu.np/notices) |
@@ -121,7 +121,7 @@ Fetches all active notices from the specified source or all sources combined.
 
 ```typescript
 function getNotices(
-  source: "iost" | "fohss" | "ioe" | "iom" | "iaas" | "iof" | "foe" | "fol" | "all",
+  source: "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all",
   options?: ScrapeOptions
 ): Promise<Notice[]>;
 ```

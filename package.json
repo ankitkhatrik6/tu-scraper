@@ -1,6 +1,6 @@
 {
   "name": "tu-scraper",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Production-ready TypeScript scraper and npm package to fetch official Tribhuvan University (TU) notices across all 8 verified institute and faculty portals.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

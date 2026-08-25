@@ -117,9 +117,9 @@ export function ApiReference({ darkMode, focusedSection }: ApiReferenceProps) {
               </tr>
             </thead>
             <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800 font-mono text-[11px]">
-              <tr>
-                <td className="px-3 py-2 text-blue-500 font-bold">source</td>
-                <td className="px-3 py-2 text-neutral-400">&quot;iost&quot; | &quot;fohss&quot; | &quot;ioe&quot; | &quot;iom&quot; | &quot;iaas&quot; | &quot;iof&quot; | &quot;foe&quot; | &quot;fol&quot; | &quot;all&quot;</td>
+              <tr className="border-b border-white/5 bg-white/5 transition-colors">
+                <td className="px-3 py-2 font-mono text-sm text-green-400">source</td>
+                <td className="px-3 py-2 text-neutral-400">&quot;iost&quot; | &quot;fohss&quot; | &quot;ioe&quot; | &quot;ac&quot; | &quot;iaas&quot; | &quot;iof&quot; | &quot;foe&quot; | &quot;fol&quot; | &quot;all&quot;</td>
                 <td className="px-3 py-2 text-red-500 font-sans font-semibold">Yes</td>
                 <td className="px-3 py-2 font-sans text-neutral-400">Target institution or &quot;all&quot;</td>
               </tr>
@@ -354,7 +354,7 @@ export function extractAttachments($el: cheerio.Cheerio<any>, baseUrl: string): 
   | 'iost'
   | 'fohss'
   | 'ioe'
-  | 'iom'
+  | 'ac'
   | 'iaas'
   | 'iof'
   | 'foe'

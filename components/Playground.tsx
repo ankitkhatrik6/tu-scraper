@@ -35,7 +35,7 @@ const SOURCE_OPTIONS: { id: SourceQuery; name: string; category: string }[] = [
   { id: 'iost', name: 'IOST - Institute of Science and Technology', category: 'Institute' },
   { id: 'fohss', name: 'FOHSS - Faculty of Humanities & Social Sciences', category: 'Faculty' },
   { id: 'ioe', name: 'IOE - Institute of Engineering', category: 'Institute' },
-  { id: 'iom', name: 'IOM - Institute of Medicine', category: 'Institute' },
+  { id: 'ac', name: 'AC - Amrit Science Campus', category: 'Campus' },
   { id: 'iaas', name: 'IAAS - Institute of Agriculture & Animal Science', category: 'Institute' },
   { id: 'iof', name: 'IOF - Institute of Forestry', category: 'Institute' },
   { id: 'foe', name: 'FOE - Faculty of Education', category: 'Faculty' },
@@ -333,7 +333,7 @@ export function Playground({ darkMode, initialSource = 'iost' }: PlaygroundProps
         return darkMode ? 'bg-blue-900/40 text-blue-300 border-blue-700/50' : 'bg-blue-50 text-blue-700 border-blue-200';
       case 'ioe':
         return darkMode ? 'bg-orange-900/40 text-orange-300 border-orange-700/50' : 'bg-orange-50 text-orange-700 border-orange-200';
-      case 'iom':
+      case 'ac':
         return darkMode ? 'bg-red-900/40 text-red-300 border-red-700/50' : 'bg-red-50 text-red-700 border-red-200';
       case 'fohss':
         return darkMode ? 'bg-purple-900/40 text-purple-300 border-purple-700/50' : 'bg-purple-50 text-purple-700 border-purple-200';

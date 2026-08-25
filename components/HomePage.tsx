@@ -158,7 +158,7 @@ if (notices[0]) {
         </div>
         <p>
           All scrapers query only verified Tribhuvan University administrative domains
-          (<code className="font-mono text-xs">iost.tu.edu.np</code>, <code className="font-mono text-xs">ioe.tu.edu.np</code>, <code className="font-mono text-xs">iom.tu.edu.np</code>, etc.).
+          (<code className="font-mono text-xs">iost.tu.edu.np</code>, <code className="font-mono text-xs">ioe.tu.edu.np</code>, <code className="font-mono text-xs">ac.tu.edu.np</code>, etc.).
           No third-party blogs or unverified aggregators are queried.
         </p>
       </div>

@@ -191,7 +191,7 @@ curl -X GET "http://localhost:3000/api/notices?source=${source}&action=notices"`
               <option value="iost">IOST</option>
               <option value="fohss">FOHSS</option>
               <option value="ioe">IOE</option>
-              <option value="iom">IOM</option>
+              <option value="ac">AC</option>
               <option value="iaas">IAAS</option>
               <option value="iof">IOF</option>
               <option value="foe">FOE</option>

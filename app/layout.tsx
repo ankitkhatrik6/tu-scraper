@@ -3,7 +3,7 @@ import './globals.css'; // Global styles
 
 export const metadata: Metadata = {
   title: 'TU Scraper - Official Tribhuvan University Notices API',
-  description: 'A production-ready TypeScript scraper and npm package for fetching official Tribhuvan University (TU) notices across all 8 verified faculties and institutes in Nepal.',
+  description: 'A production-ready TypeScript scraper and npm package for fetching official Tribhuvan University (TU) notices across all 9 verified faculties, institutes and the central office in Nepal.',
   keywords: ['TU Scraper', 'Tribhuvan University', 'Notices API', 'Scraper', 'Nepal', 'IOST', 'IOE', 'AC', 'NPM Package', 'TypeScript', 'TU Notice Scraper', 'TU API'],
   authors: [{ name: 'Ankit Khatri KC' }],
   creator: 'Ankit Khatri KC',

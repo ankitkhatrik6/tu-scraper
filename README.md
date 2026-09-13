@@ -3,10 +3,10 @@
   
   <h1>tu-scraper</h1>
   
-  <p><strong>TypeScript scraper to fetch official Tribhuvan University (TU) notices across all 8 verified institute and faculty portals.</strong></p>
+  <p><strong>TypeScript scraper to fetch official Tribhuvan University (TU) notices across all 9 verified institute, faculty and central office portals.</strong></p>
 
   <a href="https://www.npmjs.com/package/tu-scraper">
-    <img src="https://img.shields.io/badge/npm-v1.0.0-cb3837.svg?style=flat-square&logo=npm" alt="npm version" />
+    <img src="https://img.shields.io/badge/npm-v1.2.0-cb3837.svg?style=flat-square&logo=npm" alt="npm version" />
   </a>
   <a href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/TypeScript-Strict%20Type%20Safe-3178C6.svg?style=flat-square&logo=typescript" alt="TypeScript" />
@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/Node.js-18%2B%20%7C%2020%2B%20%7C%2022%2B-339933.svg?style=flat-square&logo=nodedotjs" alt="Node.js" />
   </a>
   <a href="https://github.com/ankitkhatrik6/tu-scraper/actions">
-    <img src="https://img.shields.io/badge/Tests-20%2F20%20Passing-brightgreen.svg?style=flat-square" alt="Tests" />
+    <img src="https://img.shields.io/badge/Tests-25%2F25%20Passing-brightgreen.svg?style=flat-square" alt="Tests" />
   </a>
 </div>
 
@@ -61,7 +61,7 @@ console.log(iostNotices);
 const latestIoe = await getLatest("ioe");
 console.log(`Latest IOE Notice: ${latestIoe?.title} (${latestIoe?.date})`);
 
-// 3. Search for a specific program/keyword across all 8 institutions
+// 3. Search for a specific program/keyword across all 9 institutions
 const bscResults = await searchNotices("BSc CSIT");
 
 // 4. Search within a specific faculty
@@ -70,9 +70,9 @@ const examNotices = await searchNotices("exam", "fohss");
 
 ---
 
-## Supported Sources (8 Official Portals)
+## Supported Sources (9 Official Portals)
 
-`tu-scraper` strictly targets only the 8 verified official Tribhuvan University portals:
+`tu-scraper` strictly targets only the 9 verified official Tribhuvan University portals:
 
 | Source Identifier | Institution Name | Category | Official Portal URL |
 | :--- | :--- | :--- | :--- |
@@ -84,7 +84,8 @@ const examNotices = await searchNotices("exam", "fohss");
 | `iof` | Institute of Forestry | Institute | [https://iof.tu.edu.np/notices](https://iof.tu.edu.np/notices) |
 | `foe` | Faculty of Education | Faculty | [https://foe.tu.edu.np/notices](https://foe.tu.edu.np/notices) |
 | `fol` | Faculty of Law | Faculty | [https://fol.tu.edu.np/notices](https://fol.tu.edu.np/notices) |
-| `all` | Aggregates all 8 institutions | Meta-source | All supported URLs above |
+| `tu` | Tribhuvan University (Central Office) | University | [https://tu.edu.np/notices](https://tu.edu.np/notices) |
+| `all` | Aggregates all 9 institutions | Meta-source | All supported URLs above |
 
 ---
 
@@ -121,13 +122,13 @@ Fetches all active notices from the specified source or all sources combined.
 
 ```typescript
 function getNotices(
-  source: "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all",
+  source: "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "tu" | "all",
   options?: ScrapeOptions
 ): Promise<Notice[]>;
 ```
 
 #### Behavior with `"all"`:
-When calling `await getNotices("all")`, scrapers run concurrently across all 8 faculties via `Promise.allSettled`. If an individual faculty server is temporarily unreachable, the remaining successful faculty results are combined and returned gracefully.
+When calling `await getNotices("all")`, scrapers run concurrently across all 9 portals via `Promise.allSettled`. If an individual faculty server is temporarily unreachable, the remaining successful faculty results are combined and returned gracefully.
 
 ---
 
@@ -263,8 +264,8 @@ app.listen(8080, () => console.log("TU Notices API running on port 8080"));
 
 ## Testing
 
-The package includes a comprehensive test suite with 20 unit tests covering:
-- All 8 source adapters using real saved HTML fixtures
+The package includes a comprehensive test suite with 25 unit tests covering:
+- All 9 source adapters using real saved HTML fixtures
 - Notice normalization and schema compliance
 - Search matching & edge cases
 - `getLatest` behavior

@@ -93,7 +93,7 @@ if (notices[0]) {
           }`}
         >
           A fast, resilient, and fully type-safe TypeScript scraper engine built specifically for
-          official Tribhuvan University administrative portals across 8 faculties and institutes.
+          official Tribhuvan University administrative portals across 9 faculties, institutes and the central office.
         </p>
 
         {/* Primary CTA Buttons */}
@@ -139,7 +139,7 @@ if (notices[0]) {
             }`}
           >
             <Building2 className="w-3.5 h-3.5" />
-            <span>View 8 Portals</span>
+            <span>View 9 Portals</span>
           </button>
         </div>
       </section>
@@ -399,7 +399,7 @@ if (notices[0]) {
               <ArrowRight className="w-3.5 h-3.5" />
             </div>
             <p className={`text-[11px] mt-2 ${darkMode ? 'text-[#c9d1d9]' : 'text-[#656d76]'}`}>
-              Verified directory and domain matrix across all 8 Tribhuvan University institutions.
+              Verified directory and domain matrix across all 9 Tribhuvan University institutions.
             </p>
           </button>
         </div>

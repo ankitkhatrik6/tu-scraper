@@ -9,7 +9,8 @@ export type NoticeSource =
   | 'iaas'
   | 'iof'
   | 'foe'
-  | 'fol';
+  | 'fol'
+  | 'tu';
 
 export type SourceQuery = NoticeSource | 'all';
 
@@ -79,7 +80,7 @@ export interface SourceMeta {
   nepaliName: string;
   url: string;
   baseUrl: string;
-  category: 'Institute' | 'Faculty' | 'Campus';
+  category: 'Institute' | 'Faculty' | 'Campus' | 'University';
   location: string;
   verified: boolean;
   notes?: string;

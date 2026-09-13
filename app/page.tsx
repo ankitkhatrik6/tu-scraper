@@ -27,15 +27,19 @@ export default function Page() {
 
   // Initialize theme from localStorage
   useEffect(() => {
-    setIsMounted(true);
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setDarkMode(true);
-    } else if (savedTheme === 'light') {
-      setDarkMode(false);
-    } else if (window.matchMedia) {
-      setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
+    // Access browser-only APIs inside a microtask (after the component has hydrated) so React's
+    // effect rules stay happy and the <html data-theme> class is only toggled post-mount.
+    queueMicrotask(() => {
+      setIsMounted(true);
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        setDarkMode(true);
+      } else if (savedTheme === 'light') {
+        setDarkMode(false);
+      } else if (window.matchMedia) {
+        setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+    });
   }, []);
 
   // Sync dark class with document element for Tailwind dark utilities
@@ -155,10 +159,10 @@ export default function Page() {
       desc: 'Test real queries, inspect notices, and view media modals',
     },
     {
-      title: 'Supported Portals Directory (8 Sources)',
+      title: 'Supported Portals Directory (9 Sources)',
       page: 'portals' as MainNavPage,
       category: 'Portals',
-      desc: 'IOST, IOE, AC, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
+      desc: 'TU, IOST, IOE, AC, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
     },
   ];
 

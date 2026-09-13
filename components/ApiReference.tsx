@@ -98,7 +98,7 @@ export function ApiReference({ darkMode, focusedSection }: ApiReferenceProps) {
         </div>
 
         <p className={`text-xs sm:text-sm leading-relaxed ${darkMode ? 'text-[#c9d1d9]' : 'text-[#24292f]'}`}>
-          Fetches all published notices from the specified faculty or institution. Passing <code className="font-mono text-blue-500 font-semibold">&quot;all&quot;</code> concurrently queries all 8 portals with resilience via <code className="font-mono">Promise.allSettled</code>.
+          Fetches all published notices from the specified faculty or institution. Passing <code className="font-mono text-blue-500 font-semibold">&quot;all&quot;</code> concurrently queries all 9 portals with resilience via <code className="font-mono">Promise.allSettled</code>.
         </p>
 
         {/* Arguments Table with responsive scroll */}
@@ -119,7 +119,7 @@ export function ApiReference({ darkMode, focusedSection }: ApiReferenceProps) {
             <tbody className="divide-y divide-neutral-200 dark:divide-neutral-800 font-mono text-[11px]">
               <tr className="border-b border-white/5 bg-white/5 transition-colors">
                 <td className="px-3 py-2 font-mono text-sm text-green-400">source</td>
-                <td className="px-3 py-2 text-neutral-400">&quot;iost&quot; | &quot;fohss&quot; | &quot;ioe&quot; | &quot;ac&quot; | &quot;iaas&quot; | &quot;iof&quot; | &quot;foe&quot; | &quot;fol&quot; | &quot;all&quot;</td>
+                <td className="px-3 py-2 text-neutral-400">&quot;iost&quot; | &quot;fohss&quot; | &quot;ioe&quot; | &quot;ac&quot; | &quot;iaas&quot; | &quot;iof&quot; | &quot;foe&quot; | &quot;fol&quot; | &quot;tu&quot; | &quot;all&quot;</td>
                 <td className="px-3 py-2 text-red-500 font-sans font-semibold">Yes</td>
                 <td className="px-3 py-2 font-sans text-neutral-400">Target institution or &quot;all&quot;</td>
               </tr>
@@ -152,7 +152,7 @@ export function ApiReference({ darkMode, focusedSection }: ApiReferenceProps) {
 // Fetch notices from Institute of Science & Technology
 const notices = await getNotices("iost");
 
-// Or aggregate across all 8 faculties
+// Or aggregate across all 9 official portals
 const allNotices = await getNotices("all", { timeout: 12000, bypassCache: true });`}</pre>
         </div>
       </section>

@@ -289,7 +289,9 @@ export function extractAttachments(
       }
 
       const href = $a.attr('href');
-      if (!href) return;
+      // Skip inline data: URIs (e.g. base64-embedded scans on the TU central portal) and pure
+      // anchor links — they are never files we should surface as attachments.
+      if (!href || href.startsWith('data:') || href.startsWith('#')) return;
 
       const fullUrl = resolveUrl(href, baseUrl);
       if (seenUrls.has(fullUrl) || isIrrelevantAsset(fullUrl)) return;
@@ -339,7 +341,9 @@ export function extractAttachments(
       }
 
       const src = $img.attr('src') || $img.attr('data-src');
-      if (!src) return;
+      // data: URIs are base64 blobs inlined into the HTML — they cannot be attached or displayed
+      // as standalone notice files, so skip them entirely (keeps output URLs clean).
+      if (!src || src.startsWith('data:')) return;
 
       const fullUrl = resolveUrl(src, baseUrl);
       if (!seenUrls.has(fullUrl) && !isIrrelevantAsset(fullUrl) && isImageUrl(fullUrl)) {
@@ -489,6 +493,68 @@ export function parseTuPortalNotices(
 }
 
 /**
+ * Parser for the official TU central office notice listing (https://tu.edu.np/notices).
+ *
+ * The listing builds one card per notice:
+ *   <div class="inner-notice-wrap p-4">
+ *     <a class="d-block" href="https://tu.edu.np/notices/15192">
+ *       <h5>प्रधानमन्त्री दैवी प्रकोप उद्बार कोषमा रकम जम्मा सम्वन्धमा ।</h5>
+ *       <div class="badge bg-danger"><span class="nep_date">2026-09-09</span></div>
+ *     </a>
+ *   </div>
+ *
+ * The same page also renders a "Highlights" marquee and a "More News" sidebar that link to both
+ * /notices/ and /news/ pages, so only anchors inside the listing container that point to a notice
+ * id are considered. Duplicate urls are de-duplicated.
+ */
+export function parseTuCentralNotices(html: string, source: NoticeSource, baseUrl: string): Notice[] {
+  const $ = cheerio.load(html);
+  const notices: Notice[] = [];
+  const seenUrls = new Set<string>();
+
+  $('.inner-notice-wrap').each((i, el) => {
+    const $item = $(el);
+    const $link = $item.find('a[href]').first();
+    const href = $link.attr('href');
+    if (!href) return;
+
+    const fullUrl = resolveUrl(href, baseUrl);
+    // Only real notice links (e.g. https://tu.edu.np/notices/15192) belong here. The highlights
+    // marquee and news sidebar point to /news/ ids or top-level pages which must be ignored.
+    if (!/\/notices?\/[0-9a-zA-Z_-]+/.test(fullUrl)) return;
+
+    const title = cleanText($item.find('h5, h4, h3').first().text()) || cleanText($link.text());
+    if (!title || title.toLowerCase() === 'notices' || title.toLowerCase() === 'info') return;
+
+    const date = extractDate($item);
+    const attachments = extractAttachments($item, baseUrl, $);
+    const pdfs = attachments.filter((a) => a.type === 'pdf').map((a) => a.url);
+    const directPdf = extractPdf($item, baseUrl);
+    if (directPdf && !pdfs.includes(directPdf)) {
+      pdfs.unshift(directPdf);
+    }
+    const images = attachments.filter((a) => a.type === 'image').map((a) => a.url);
+    const id = extractNoticeId(fullUrl, i + 1);
+
+    if (!seenUrls.has(fullUrl)) {
+      seenUrls.add(fullUrl);
+      notices.push({
+        id,
+        title,
+        source,
+        ...(date ? { date } : {}),
+        url: fullUrl,
+        ...(pdfs.length > 0 ? { pdf: pdfs[0], pdfs } : {}),
+        ...(images.length > 0 ? { image: images[0], images } : {}),
+        ...(attachments.length > 0 ? { attachments } : {}),
+      });
+    }
+  });
+
+  return notices;
+}
+
+/**
  * Deep parse an individual TU notice detail page HTML
  */
 export function parseNoticeDetail(
@@ -500,16 +566,24 @@ export function parseNoticeDetail(
   const $ = cheerio.load(html);
   const id = extractNoticeId(url);
 
+  // Clone document and strip site chrome (header, footer, nav, sidebar, info-officer, widgets)
+  // BEFORE extracting the title/dates so that header brand names (e.g. the "Tribhuvan University"
+  // <h4> in the navbar) or the "More Notices" sidebar never shadow the real notice heading/date.
+  const $contentDoc = cheerio.load(html);
+  $contentDoc('header, nav, footer, aside, .sidebar, .right-sidebar, .left-sidebar, .widget, .widget-area, .quick-links, .affiliated-colleges, .slider, .carousel, .navbar, .top-header, .main-header, .footer-wrapper, .site-header, .info-officer, .f-links, #header, #footer, #sidebar, #nav, .scroll-news, .back-to-top, .social-media-icons, .foter-bottom').remove();
+
   // Extract Title from heading, breadcrumbs, or page title
   const title =
-    cleanText($('h4.title, .notice-title, .section-title h3, h3.title, .detail h5, .card-title, h2, h3, h4').first().text()) ||
+    cleanText($contentDoc('h4.title, .notice-title, .section-title h3, h3.title, .detail h5, .card-title, h2, h3, h4').first().text()) ||
     cleanText($('title').text().replace(/[-|].*$/, '')) ||
     'Tribhuvan University Notice';
 
   // Extract Dates
-  let nepaliDate = cleanText($('.nep_date, .date-nepali').first().text()) || undefined;
-  const englishDate = cleanText($('.date-eng, .english-date').first().text()) || undefined;
-  const generalDate = nepaliDate || englishDate || extractDate($('body'));
+  // NOTE: the TU central portal marks the publication date with id="nep_date" (an id, not a
+  // class), so the selector must include #nep_date to avoid silently picking sidebar dates.
+  let nepaliDate = cleanText($contentDoc('#nep_date, .nep_date, .date-nepali').first().text()) || undefined;
+  const englishDate = cleanText($contentDoc('.date-eng, .english-date').first().text()) || undefined;
+  const generalDate = nepaliDate || englishDate || extractDate($contentDoc('body'));
 
   // The TU portal often incorrectly puts the AD date inside the nepali date field.
   // We can attempt to convert any AD-looking date to a real BS date.
@@ -544,12 +618,8 @@ export function parseNoticeDetail(
 
   // Extract body content
   const content =
-    cleanText($('.ck-table, .detail-content, .post-content, .notice-content, .inner-downloads, .detail-page-inner').first().text()) ||
+    cleanText($contentDoc('.ck-table, .detail-content, .post-content, .notice-content, .inner-downloads, .detail-page-inner').first().text()) ||
     undefined;
-
-  // Clone document and strip site chrome (header, footer, nav, sidebar, info-officer, widgets)
-  const $contentDoc = cheerio.load(html);
-  $contentDoc('header, nav, footer, aside, .sidebar, .right-sidebar, .left-sidebar, .widget, .widget-area, .quick-links, .affiliated-colleges, .slider, .carousel, .navbar, .top-header, .main-header, .footer-wrapper, .site-header, .info-officer, .f-links, #header, #footer, #sidebar, #nav, .scroll-news, .back-to-top, .social-media-icons, .foter-bottom').remove();
 
   // Find notice container
   const $mainContent = $contentDoc('.detail-page-inner, .detail-page, .detail-content, .notice-detail, .post-content, .notice-content, .inner-downloads, .download-wrapper, article, main').first();

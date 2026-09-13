@@ -155,10 +155,10 @@ export default function Page() {
       desc: 'Test real queries, inspect notices, and view media modals',
     },
     {
-      title: 'Supported Portals Directory (8 Sources)',
+      title: 'Supported Portals Directory (9 Sources)',
       page: 'portals' as MainNavPage,
       category: 'Portals',
-      desc: 'IOST, IOE, AC, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
+      desc: 'TU, IOST, IOE, AC, FOHSS, IAAS, IOF, FOE, FOL matrix and verified domains',
     },
   ];
 

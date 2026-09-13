@@ -295,7 +295,7 @@ for (const notice of notices) {
 // Search IOE portal for exam routines
 const examNotices = await searchNotices('routine', 'ioe');
 
-// Search all 8 TU faculties simultaneously
+// Search all 9 TU portals simultaneously
 const allScholarships = await searchNotices('scholarship', 'all');`}</pre>
                 </div>
               </div>
@@ -319,7 +319,7 @@ const allScholarships = await searchNotices('scholarship', 'all');`}</pre>
                   Single Source vs Aggregated (&apos;all&apos;)
                 </h3>
                 <p className={`text-xs ${darkMode ? 'text-[#c9d1d9]' : 'text-[#656d76]'}`}>
-                  When passing <code className="font-mono text-[11px]">&apos;all&apos;</code>, the scraper dispatches concurrent requests across all 8 portals with bounded concurrency to prevent throttling.
+                  When passing <code className="font-mono text-[11px]">&apos;all&apos;</code>, the scraper dispatches concurrent requests across all 9 portals with bounded concurrency to prevent throttling.
                 </p>
                 <div
                   className={`rounded-md border p-3.5 font-mono text-xs overflow-x-auto ${
@@ -328,7 +328,7 @@ const allScholarships = await searchNotices('scholarship', 'all');`}</pre>
                 >
                   <pre>{`import { getNotices } from 'tu-scraper';
 
-// Fetches from all 8 portals concurrently
+// Fetches from all 9 portals concurrently
 const allNotices = await getNotices('all', {
   concurrency: 4, // Max concurrent requests
   timeout: 10000, // 10 second timeout per source

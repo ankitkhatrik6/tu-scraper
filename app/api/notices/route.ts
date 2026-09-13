@@ -27,7 +27,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         success: false,
-        error: `Invalid source "${source}". Allowed values: iost, fohss, ioe, ac, iaas, iof, foe, fol, all`,
+        error: `Invalid source "${source}". Allowed values: iost, fohss, ioe, ac, iaas, iof, foe, fol, tu, all`,
       },
       { status: 400 }
     );

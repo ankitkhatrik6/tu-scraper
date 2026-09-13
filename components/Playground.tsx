@@ -31,7 +31,8 @@ interface PlaygroundProps {
 }
 
 const SOURCE_OPTIONS: { id: SourceQuery; name: string; category: string }[] = [
-  { id: 'all', name: 'All 8 Sources Combined', category: 'Aggregation' },
+  { id: 'all', name: 'All 9 Sources Combined', category: 'Aggregation' },
+  { id: 'tu', name: 'TU - Tribhuvan University (Central Office)', category: 'University' },
   { id: 'iost', name: 'IOST - Institute of Science and Technology', category: 'Institute' },
   { id: 'fohss', name: 'FOHSS - Faculty of Humanities & Social Sciences', category: 'Faculty' },
   { id: 'ioe', name: 'IOE - Institute of Engineering', category: 'Institute' },
@@ -345,6 +346,8 @@ export function Playground({ darkMode, initialSource = 'iost' }: PlaygroundProps
         return darkMode ? 'bg-amber-900/40 text-amber-300 border-amber-700/50' : 'bg-amber-50 text-amber-700 border-amber-200';
       case 'fol':
         return darkMode ? 'bg-indigo-900/40 text-indigo-300 border-indigo-700/50' : 'bg-indigo-50 text-indigo-700 border-indigo-200';
+      case 'tu':
+        return darkMode ? 'bg-cyan-900/40 text-cyan-300 border-cyan-700/50' : 'bg-cyan-50 text-cyan-700 border-cyan-200';
       default:
         return darkMode ? 'bg-neutral-800 text-neutral-300 border-neutral-700' : 'bg-neutral-100 text-neutral-700 border-neutral-300';
     }

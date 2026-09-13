@@ -47,7 +47,7 @@ export function SourceRegistry({ darkMode, onSelectForPlayground }: SourceRegist
           <div>
             <h2 className={`text-base font-semibold flex items-center gap-2 ${darkMode ? 'text-white' : 'text-[#1f2328]'}`}>
               <Building2 className="w-4 h-4 text-blue-500" />
-              <span>Official Tribhuvan University Portals Matrix (8 Sources)</span>
+              <span>Official Tribhuvan University Portals Matrix (9 Sources)</span>
             </h2>
             <p
               className={`text-xs mt-1 ${
@@ -72,7 +72,7 @@ export function SourceRegistry({ darkMode, onSelectForPlayground }: SourceRegist
                   : 'text-neutral-500 hover:text-neutral-800 dark:hover:text-neutral-200'
               }`}
             >
-              All (8)
+              All (9)
             </button>
             <button
               onClick={() => setFilterType('institute')}
@@ -135,7 +135,9 @@ export function SourceRegistry({ darkMode, onSelectForPlayground }: SourceRegist
                   </span>
                   <span
                     className={`text-[11px] px-2.5 py-0.5 rounded-full font-semibold transition-colors ${
-                      src.category === 'Institute'
+                      src.category === 'University'
+                        ? 'max-sm:bg-cyan-100 max-sm:text-cyan-900 max-sm:border max-sm:border-cyan-300 max-sm:dark:bg-cyan-900/70 max-sm:dark:text-cyan-100 max-sm:dark:border-cyan-500/60 sm:bg-cyan-100 sm:text-cyan-800 sm:dark:bg-cyan-900/30 sm:dark:text-cyan-300'
+                        : src.category === 'Institute'
                         ? 'max-sm:bg-purple-100 max-sm:text-purple-900 max-sm:border max-sm:border-purple-300 max-sm:dark:bg-purple-900/70 max-sm:dark:text-purple-100 max-sm:dark:border-purple-500/60 sm:bg-purple-100 sm:text-purple-800 sm:dark:bg-purple-900/30 sm:dark:text-purple-300'
                         : 'max-sm:bg-amber-100 max-sm:text-amber-900 max-sm:border max-sm:border-amber-300 max-sm:dark:bg-amber-900/70 max-sm:dark:text-amber-100 max-sm:dark:border-amber-500/60 sm:bg-amber-100 sm:text-amber-800 sm:dark:bg-amber-900/30 sm:dark:text-amber-300'
                     }`}

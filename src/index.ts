@@ -8,6 +8,7 @@ import { scrapeIoe, IOE_URL } from './sources/ioe';
 import { scrapeIof, IOF_URL } from './sources/iof';
 import { scrapeAc, AC_URL } from './sources/ac';
 import { scrapeIost, IOST_URL } from './sources/iost';
+import { scrapeTu, TU_URL } from './sources/tu';
 import { Notice, NoticeAttachment, NoticeDetail, NoticeSource, ScrapeOptions, SourceMeta, SourceQuery } from './types';
 import { fetchHtml } from './utils/http';
 import { parseNoticeDetail } from './utils/parser';
@@ -31,6 +32,7 @@ export const SOURCES: readonly NoticeSource[] = [
   'iof',
   'foe',
   'fol',
+  'tu',
 ] as const;
 
 /**
@@ -133,6 +135,18 @@ export const SOURCE_METADATA: Record<NoticeSource, SourceMeta> = {
     verified: true,
     notes: 'Official law entrance, LL.B, B.A.LL.B & LL.M notices',
   },
+  tu: {
+    id: 'tu',
+    code: 'TU',
+    name: 'Tribhuvan University (Central Office)',
+    nepaliName: 'त्रिभुवन विश्वविद्यालय',
+    url: TU_URL,
+    baseUrl: 'https://tu.edu.np',
+    category: 'University',
+    location: 'Kirtipur, Kathmandu',
+    verified: true,
+    notes: 'Official central office notices, circulars and exam information',
+  },
 };
 
 /**
@@ -147,6 +161,7 @@ const SCRAPER_MAP: Record<NoticeSource, (options?: ScrapeOptions) => Promise<Not
   iof: scrapeIof,
   foe: scrapeFoe,
   fol: scrapeFol,
+  tu: scrapeTu,
 };
 
 /**
@@ -171,9 +186,9 @@ export function clearCache(): void {
 }
 
 /**
- * Fetch official Tribhuvan University notices from a specific source or from all 8 sources.
+ * Fetch official Tribhuvan University notices from a specific source or from all 9 sources.
  *
- * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all"
+ * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "tu" | "all"
  * @param options Optional scrape settings (timeout, cache bypass, user-agent)
  * @returns Array of normalized Notice objects
  * @throws {InvalidSourceError} if an unrecognized source is provided
@@ -239,7 +254,7 @@ export async function getNotices(source: SourceQuery, options?: ScrapeOptions): 
  * Fetch the latest single notice from a source or across all sources.
  * If available, returns enriched detail with scanned images and PDF attachments.
  *
- * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "all"
+ * @param source "iost" | "fohss" | "ioe" | "ac" | "iaas" | "iof" | "foe" | "fol" | "tu" | "all"
  * @param options Optional scrape settings
  * @returns The most recent Notice/NoticeDetail or null if no notices exist
  */
@@ -298,7 +313,7 @@ export async function enrichNoticesWithAttachments(
 }
 
 /**
- * Search notices by title match across a specified source or all 8 sources.
+ * Search notices by title match across a specified source or all 9 sources.
  *
  * @param query Search keyword (case-insensitive substring match)
  * @param source Optional source identifier (defaults to "all")
@@ -349,12 +364,23 @@ export async function getNoticeDetail(
     fullUrl = `${meta.baseUrl}/notices/${fullUrl}`;
     determinedSource = source;
   } else {
-    // Detect source from URL hostname
-    for (const src of SOURCES) {
-      if (fullUrl.includes(`${src}.tu.edu.np`)) {
-        determinedSource = src;
-        break;
+    // Detect source from URL hostname.
+    // The TU central office portal lives at tu.edu.np directly (no sub-domain), so it needs to be
+    // matched before the generic `*.tu.edu.np` loop below.
+    try {
+      const { hostname } = new URL(fullUrl);
+      if (hostname === 'tu.edu.np' || hostname === 'www.tu.edu.np') {
+        determinedSource = 'tu';
+      } else {
+        for (const src of SOURCES) {
+          if (fullUrl.includes(`${src}.tu.edu.np`)) {
+            determinedSource = src;
+            break;
+          }
+        }
       }
+    } catch {
+      // Un-parseable hostname — keep the default determinedSource
     }
   }
 

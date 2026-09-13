@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://tu.edu.np/assets/temp1/bootstrap/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="https://tu.edu.np/assets/temp1/css/app.css">
+    <!--Bootstrap icons-->
+    <link rel="stylesheet" href="https://tu.edu.np/assets/temp1/font/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="https://tu.edu.np/storage/fa.png" type="image/x-icon">
+    <title>Tribhuvan University</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.9.0/fullcalendar.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="https://tu.edu.np/assets/temp1/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://tu.edu.np/assets/temp1/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://tu.edu.np/assets/temp1/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://tu.edu.np/assets/temp1/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="https://tu.edu.np/assets/temp1/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head><body>
+    <header class="header">
+    <div class="header-top">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-10 col-lg-10 col-md-10 col-sm-12">
+                <div class="header-top-left d-flex align-items-center">
+                    <div class="mr-2"> <a href="https://tu.edu.np/"> <img src="https://tu.edu.np/assets/logo.png" height="30px"
+                        alt=""></a></div>
+                        <div class="header-top-left">
+                            <ul class="header-top-links">
+                                                                                                            <li class=""><a
+                                                href="https://tu.edu.np/news">NEWS</a></li>
+                                                                                                                                                <li class="active"><a
+                                                href="https://tu.edu.np/notices">NOTICE</a></li>
+                                                                                                                                                <li class=""><a
+                                                href="https://tu.edu.np/events">EVENTS</a></li>
+                                                                                                                                                <li class="ht-drodown "><a href="">RESOURCES <i
+                                                    class="bi bi-caret-down-fill ms-2"></i></a>
+                                            <div class="header-top-dropdown">
+                                                <ul>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/downloads">DOWNLOADS</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/gallery">GALLERY</a>
+                                                        </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                                                                                                                                <li class=""><a
+                                                href="https://tu.edu.np/pages/scholorship-20">Scholarships</a></li>
+                                                                                                                                                <li class="ht-drodown "><a href="">Rules <i
+                                                    class="bi bi-caret-down-fill ms-2"></i></a>
+                                            <div class="header-top-dropdown">
+                                                <ul>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/downloads">Act</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/pages/rules-211">Rules</a>
+                                                        </li>
+                                                                                                            <li class=""><a
+                                                                href="https://tu.edu.np/pages/laws-212">Laws</a>
+                                                        </li>
+                                                    
+                                                </ul>
+                                            </div>
+                                        </li>
+                                                                                                    <li class="mx-2"><a href="https://tu.edu.np/./calendar" title="Calendar"><i
+                                            class="bi bi-calendar3"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-2 col-sm-12 my-1">
+                    <div class="header-top-right">
+                        <div class="header-top-search">
+                            <form class="d-flex m-0 align-items-center" method="GET" action="https://tu.edu.np/search"
+                            target="_blank">
+                            <input class="form-control" type="search" name="search" placeholder="Search"
+                            aria-label="Search" value="">
+                                <div>
+                                    <button class="btn text-warning" type="submit"><i class="bi bi-search"></i></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12">
+                <div class="header-middle-left">
+                    <div class="header-middle-logo d-flex align-items-center">
+                        <a href="https://tu.edu.np">
+                            <!-- <img src="https://portal.tu.edu.np/medias/TULogoTIF-2_2024_04_21_11_26_49.jpg" alt="" /> -->
+                             <img src="https://tu.edu.np/assets/logo.png" height="100"
+                        alt="">
+                        
+                        </a>
+                        <div class="ms-2">
+                            <h4 class="brand-name">Tribhuvan University</h4>
+                            <small>Kirtipur, Kathmandu</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-6 col-md-6 col-sm-12">
+                <div class="header-middle-right">
+                    <ul class="header-middle-contact text-end flex-wrap justify-between">
+                            <li class="me-3">
+                                <i class="bi bi-phone"></i>
+                                <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEUAAAAUCAYAAADbX/B7AAAACXBIWXMAAA7EAAAOxAGVKw4bAAADWUlEQVRYhe3YTahVVRQH8N97yUMkpEHYhyAWJBFBDswvGkSUmJA5q4yolAYVFRG2lNAQC96CGlRgkzAokogSbGBJUYFSEa+gCI2SBiIW8YiQRx/y0AZ7Xzzves1zmtTg/uGw91n3v9f6n7X3XvucO3L69GlDzMTofy3g/4hhUgZg1iBjZu7F2no7PyKOV/sGbMSiOvYQno+IPY2x5+VU3mxswXoswCTex9MRcayrvzb6+zhr8QiWYDaO4bGI2HfWSqki1vbbK+7AQnyKI1iJd+qY1pzMHMPH2IYLazJOYgO+zMyFHWO21d/jJPbiRkxgn5Lw4/StlCrmBWU2FlTBTdyDyYg4Vfmv4j48gV0dOJuxHN9iRURMZeYo3sMqvITbOvhrq19mrsGTysq8NSIm+jn92+f16miTkskZiIhf+kxf1/ZUFw4e7mmMiKk67lRmbleSsiYzL46IyZb+WunvSaztjkEJoZGUzNyMG7BHWc4D603ljmEpHq+ml9tyMnMR5lXb533DJjBdYy+pOlrFbKM/M+co2w/mZuZnuBa/401sjYgTo5W8GNvxMx4YmIkzjg/gLxxQlmhExM4OnEsb1BmrICJO4kS97SXuvDE76F/oTLJ21P5HSqF9FPthtM7AGxjDvRHx6z84VQfuVgofPJuZD/0LDoNfCXq25vY4p7+O+ps15pmIuD4ibsd1mMLyzLxzZHx8fJuS5SkcbAhbVfuf4HhE3N0fITPXV0HTuKJ5lJ6LU4Udrj9fFRFHGtwx/FHj3xIRH7bwt6Gt/sy8uhH7kma9yswPcDOeG62OVbGr69VzSDm2buoXV/FubWcpe/O8nIj4Dr9V29I+7sr6QNP4omXMLvqPKMmjbKUmZtf2z9GIuD8iRpoXLmiQ50fEZZCZF/U5WtfoH23LwWu13VSLn3okP1XtuyPiRBt/XfRHxDTeqvYtNWavJi2v9v3nPGH6kZlz8VNmflMf7vKGo7cj4lAbTu1vVWZ0MX7IzAll1q/Ej8o7SKuYbfU3sEXZJutwODO/V1bSLOyKiINdvn3mKFmehzW4Bl8p7xx3deCoq2AFXlS2ymqlUO7EsoiY7OKvC2odWYZXMFfZakfxYERshJHhXwdnY/iVPADDpAzAMCkDMEzKAPwNmSWdaUn/sawAAAAASUVORK5CYII=" style="display:inline;vertical-align:middle;" /></span>
+                            </li>
+                            <li class="me-3">
+                                <i class="bi bi-envelope"></i>
+                                <span>
+                                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAH4AAAAUCAYAAABLTIm0AAAACXBIWXMAAA7EAAAOxAGVKw4bAAAF40lEQVRoge2aeYiWVRTGfw6DDCEWQ8g0hFlZRJRFTVlpZrZYtFhZtogVLRRUWA3ytBIVLQ+tU9FGYbTYYgut+IetVrRMZiFGFjFUlIiYiYjI0PTHOW/z9jXOfPPlNJLzwHDve99zz3vuPfec+9z7zbCuri6GsPWhbrANGMLgoB7A9pXAzcAtkm7trxLbkwADewHrgI+BmZI21GpY6jwdmAw0Aw3AKmAx8ArwtKTOWvX/F7D9G7AdME3Sa4NtTxn1We4MbAPs1F8FthuB14GRwHJgKdBYq9NtjwUeByZl0zLgQ2A9sCNwDHAicK3t6ZK+zn4zgOeBDkk71/LtrQn1AJIus21JP9ego4Vw+kZgf0nrajXG9mQimocDtwNtklZUyGwHXA9cCbxre7yk72v95taKIuKp0ekAI7Jc+S+dvjvh9PXAYUUkV0LSGqDV9k/APcBDwFG1fndrxbCuri5sPwRcTOybs2x/DuwH7Aq0AqcSDl4CXCGpHcD2/HxXiemSXra9F3ADsU+PBDqAFwkusb7cwfYiIntMkLTY9o7AecAJwNgUawdaS+n9S2BfYAGxBVRipqR5OZ4WYLak+0rf/BVoKuzd1CTZPojIMocQXGMZcJukF0syM4A5BM9ZBTyXczqC0h5fqy398Mk3wC7AeOAWYu47gXeAOUV27I3V1wFfATMIsrYGmAi8bruI8veBD7K+Hng6/37MtP15GtgBLCT26GuIFD28NKijU/fDkhZn8ynEZHdm39XAkcBLJRufyfJtggdAkMvCjh96GV9VyHEsIhbWkhzvvsB822elzNkEv2gBvk+5C+jOhpsL1fgEYqv8AhhNzF0ncBKwyPb2haLe0A7sJmk6cEAqaCIGjqQHgLaUXS1pVv61EwStAbhX0gGSjksdG4ADiWgucGaWbaW2x4AdJB0s6TTgiGwfWxrk8iwbgPuzvqpkxyd9jK9X2K4DHiG2xAslHS5pKhFxADfmAnY+Pyhpb0knAHvnWDc3evVJCY+lLdOAfYiAaCKyUJ+Of1XSWoAkWauzfVRvnWyPI9INwF1Fu6RlwBv5eFypy5HAD5I6Sm0bgcm2b7M9l27HbihxicL+gZhgiNS6e9an2n7K9lPAsdk2NmWa8vnGomNypoGwq1qffFRhS3GcPBhK5K5K/FGlXHOpvqLiXZF+GwFs16f8wkLA9mhiGxnTg+5lpXrhlA4G5jKqqVSfsQmZxiw3Slo5ADb0hWp9UvhhBPTf8dVidak+htj3ChQr85csGwmnrSnJPJv93gJmE4vlKoKslB1/OpEZ3gOmbA7DK1CM4w9g255OLbYPzOpw26MGyfnVoCDIP8LAXdkuptuxVxeNtsfQfQqYn2WRDkeW+rdk2ZYstJ7uI9u3qetSIs0+IWkVsdcBjMy9uYxite9asmU0PZAv29fY/jSZ/GfASmKe1INsXY610F8e657EpVglqrKlwo5a8FdQ254CHJ+P8//2cnNCUqft84E3gfNstxBRO4UY4BuSXkjZtbbXAeNKKpYTx6K5ttsJBxfbx0W2pxJstp1uorWUiMxG4DvbK4B2SbOJm8XjgYttNxBZ4iz+Odn1xNV1HXHcOtP2hcRJ4jrbZwBfE2RyXJivebZbiRPG5bYnAj8TvKWn+e3Tlko7gFpI6v22T05bJ6eul4tj5YD9SCNpAbA/ka7HEMehDuAKYFqF+AKg2faJ+TyLiLZG4uy8kCAlK4itYhRxP3BokX4lLQcuIRZYc36zM989ClxLZKFzgaOBO4CbKmzuBF4A1pLHxpyo8cT9Qx3htIlEyixI1jxgJrH4xgEHAXenjZXz0qctPdlRA5YSATOJCKQ5wGnFy2Fbws+yGSXvE46dUMHuh9AP5AXOHsA5kp7clNwW8bOspA+BO4lI/dT2ueULngK2G2zv8g8FQ+g3BorV9xuSZPt3Ij3OBdpsL6GbDDUTqWsJMGFwrPz/YIuI+AL5vwC7EfvdUoLgnULwgxHEbV7rJhUMoWpsEXv8EP57/Al1l1A5UhehXAAAAABJRU5ErkJggg==" style="display:inline;vertical-align:middle;" /><span hidden>&#180;</span>
+                                </span>
+                            </li>
+                            <!-- Social Media Icons -->
+                            <li class="me-2 social-media-icons">
+                                <a href="https://www.facebook.com/tribhuvan.viswavidyalaya/" target="_blank">
+                                    <i class="bi bi-facebook" style="color: #338CF1; font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                            <li class="me-2 social-media-icons">
+                                <a href="https://twitter.com">
+                                    <i class="bi bi-twitter" style="color: #399BEF; font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+                            <li class="me-2 social-media-icons">
+                                <a href="https://linkedin.com">
+                                    <i class="bi bi-linkedin" style="color: #2366C2; font-size: 1.5rem;"></i>
+                                </a>
+                            </li>
+
+                            <!-- Share Dropdown -->
+                            <li class="dropdown show">
+                                <div class="me-2" id="shareButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-share-fill" style="color: #1b6ae0; font-size: 1.1rem;"></i>
+                                </div>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="shareButton">
+                                    <a class="dropdown-item text-primary"
+                                        href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftu.edu.np%2Fnotices"
+                                        target="_blank">
+                                        <i class="bi bi-facebook me-2 text-primary"></i>Share on Facebook
+                                    </a>
+                                    <a class="dropdown-item text-primary"
+                                        href="https://twitter.com/intent/tweet?text=Check+this+out!&url=https%3A%2F%2Ftu.edu.np%2Fnotices"
+                                        target="_blank">
+                                        <i class="bi bi-twitter me-2 text-info"></i>Share on Twitter
+                                    </a>
+                                    <a class="dropdown-item text-primary"
+                                        href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ftu.edu.np%2Fnotices"
+                                        target="_blank">
+                                        <i class="bi bi-linkedin me-2 text-primary"></i>Share on LinkedIn
+                                    </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+    <div class="header-bottom shadow">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/" id="navbarDropdown" role="button" aria-expanded="false">
+                                <i class="bi bi-house-fill"></i>
+                            </a>
+                        </li>
+                                                                        <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link" href="/officials">
+                                    <i class="bi bi-person-check-fill"></i> Tribhuvan University
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/about-us-2">About Tribhuvan University
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/senate-9">TU Senate
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/officials">Authorities
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/staffs">TU Officials
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/executive-council-10">Executive Council
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/academic-council-80">Academic Council
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://tusc.tu.edu.np/" class="text-white">TU Service Commission</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link " href="https://ioe.tu.edu.np/" target="_blank">
+                                     Institute / Faculties
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://ioe.tu.edu.np/" class="text-white">Institute of engineering</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://iom.edu.np/" class="text-white">Institute of Medicine</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://iost.tu.edu.np/" class="text-white">Institute of Science and Technology</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://iof.tu.edu.np" class="text-white">Institute of forestry</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://iaas.tu.edu.np/" class="text-white">Institute of Agriculture and Animal Sciences</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://www.tudoms.org/" class="text-white">Faculty of Management</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://fohss.tu.edu.np/" class="text-white">Faculty of Humanities and Social Sciences</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://foe.tu.edu.np/" class="text-white">Faculty of Education</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://www.fol.edu.np/" class="text-white">Faculty of Law</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link" href="/pages/divisions-201">
+                                    <i class="bi bi-building"></i> Central Offices
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" #" class="text-white">Offices</a>
+                                        
+                                        <i class="bi bi-arrow-right ms-4"></i>
+                                                                            </div>
+                                                                        
+                                    <ul class="inner-menu ms-0 ms-lg-5">
+                                                                                                                        <li class=""><a class="dropdown-item" href="/pages/office-of-the-vc-97">Office of the Vice Chancellor</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/office-of-the-rector-98">Office of the Rector</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/office-of-registrar-99">Office of the Registrar</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/executive-council-office-202">Secretariates of TU Senate and Executive Council</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/academic-council-office-203">Office of the Academic Council</a>
+                                        </li>
+                                                                                                                    </ul>
+                                                                    </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/centers">Centers
+                                                                                <i class="bi bi-arrow-right ms-4"></i>
+                                                                            </a>
+                                                                        
+                                    <ul class="inner-menu ms-0 ms-lg-5">
+                                                                                                                        <li class=""><a class="dropdown-item" href="https://qaac.tu.edu.np/" target="_blank">Centre for Quality Assurance and Accreditation</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/centre-for-international-relations-cir-25">Centre for International Relations (CIR)</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="www.tucdc.edu.np" target="_blank">Curriculum development Center</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/information-technology-innovation-centre-23">Information Technology Innovation Centre</a>
+                                        </li>
+                                                                                                                    </ul>
+                                                                    </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/directorates">Directorates
+                                                                                <i class="bi bi-arrow-right ms-4"></i>
+                                                                            </a>
+                                                                        
+                                    <ul class="inner-menu ms-0 ms-lg-5">
+                                                                                                                        <li class=""><a class="dropdown-item" href="/pages/student-welfare-and-sports-directorate-29">Student Welfare and Sports Directorate</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/center-for-research-26">Research Directorate</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="https://plan.tu.edu.np/" target="_blank">Office of Planning Directorate</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/office-of-the-monitoring-directorate-28">Office of the Monitoring Directorate</a>
+                                        </li>
+                                                                                                                    </ul>
+                                                                    </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/divisions-201">Divisions
+                                                                                <i class="bi bi-arrow-right ms-4"></i>
+                                                                            </a>
+                                                                        
+                                    <ul class="inner-menu ms-0 ms-lg-5">
+                                                                                                                        <li class=""><a class="dropdown-item" href="/pages/general-administration-division-213">General Administration Division</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/financial-administration-division-292">Financial Administration Division</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/personnel-administration-division-215">Personnel  Administration Division</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/information-and-public-relation-division-214">Information and Public Relation Division</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/audit-division-216">Audit Division</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="/pages/coordinate-division-217">Coordination Division</a>
+                                        </li>
+                                                                                                                    </ul>
+                                                                    </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link " href="#" target="_blank">
+                                    <i class="bi bi-hospital"></i> Campuses/Departments
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/campuses">Campuses
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/centralDepartments">Central Departments
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/departments">Departments
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/schools">Schools
+                                                                                <i class="bi bi-arrow-right ms-4"></i>
+                                                                            </a>
+                                                                        
+                                    <ul class="inner-menu ms-0 ms-lg-5">
+                                                                                                                        <li class=""><a class="dropdown-item" href="https://sms.tu.edu.np/" target="_blank">School of Mathematical Science</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="https://gsetu.edu.np/" target="_blank">Graduates  School of Education</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="https://www.iof.edu.np/" target="_blank">School of Forestry</a>
+                                        </li>
+                                                                                                                                                                <li class=""><a class="dropdown-item" href="https://somtu.edu.np/" target="_blank">School of Management</a>
+                                        </li>
+                                                                                                                    </ul>
+                                                                    </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/programs-204">Programs
+                                                                            </a>
+                                                                                                        </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link" href="/research">
+                                    <i class="fa fa-university" aria-hidden="true"></i> Research Centers
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/centre-for-economic-development-and-administration-ceda-5">Centre for Economic Development and Administration(CEDA)
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://cnastu.edu.np/" class="text-white">Centre for Nepal and Asian Studies (CNAS)</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/research-centre-for-applied-science-and-technology-7">Research Centre for Applied Science and Technology (RECAST)
+                                                                            </a>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                                                        <a class="dropdown-item text-wrap" href="/pages/research-centre-for-educational-innovation-and-development-cerid-8">Research Centre for Educational Innovation and Development (CERID)
+                                                                            </a>
+                                                                                                        </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item dropdown ">
+                                                        <div class="dropdown-toggle" id="navbarDropdown" role="button" aria-expanded="false">
+                                <a class="nav-link" href="/other-offices">
+                                    <i class="bi bi-brush-fill"></i> Other Offices
+                                </a>
+                                <button class="mob-dropdown-index btn text-white"><i class="bi bi-arrow-down"></i></button>
+                            </div>
+
+                                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://tuexam.edu.np/" class="text-white">Office of Examinations</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://www.tuth.org.np/" class="text-white">TU teaching hospital</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://www.mcvtc.org.np/" class="text-white">Manmohan Cardiothoracic Vascular and Transplant Center</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://bpklcos.edu.np/" class="text-white">BP Koirala Lions opthalmic</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://ath.tu.edu.np/" class="text-white">Ayurveda Hospital</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://nhmnepal.edu.np/" class="text-white">Natural History Museum</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://tucl.tu.edu.np/" class="text-white">Tribhuvan University Central Library</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                
+                                <li class="">
+                                    
+                                    <div class="dropdown-item d-flex justify-content-between">
+                                        <a href=" https://tubic.tu.edu.np/" class="text-white">Business Incubation Center</a>
+                                                                            </div>
+                                                                                                        </li>
+
+                                                            </ul>
+                        </li>
+                                                                                                <li class="nav-item ">
+                            <a class="nav-link" href="contact-us">
+                                Contact Us</a>
+                        </li>
+                                                
+
+                                            </ul>
+                </div>
+            </div>
+        </nav>
+                <div class="scroll-news">
+            <div class="container">
+                <div class="position-relative">
+                    <div class="scroll-news-badge position-absolute top-0 left-0"><i class="bi bi-newspaper me-2"></i>
+                        Highlights
+                    </div>
+                    <marquee behavior="" direction="" onmouseover="this.stop();" onmouseout="this.start();">
+                        <ul>
+                                                        <li>
+                                <div class="d-flex align-items-center">
+                                    <div class="scroll-index me-3">1</div>
+                                    <a href="https://tu.edu.np/notices/15192">प्रधानमन्त्री दैवी प्रकोप उद्बार कोषमा रकम जम्मा सम्वन्धमा ।</a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="d-flex align-items-center">
+                                    <div class="scroll-index me-3">2</div>
+                                    <a href="https://tu.edu.np/notices/15078">अनुसन्धान निर्देशनालयको नतिजा प्रकाशन सम्बन्धी सूचना</a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="d-flex align-items-center">
+                                    <div class="scroll-index me-3">3</div>
+                                    <a href="https://tu.edu.np/news/1225">त्रिवि शिक्षाध्यक्षमा प्रा.डा अन्जना सिंह र रजिष्ट्रारमा डा.रविन्द्र शिवाकोटी नियुक्त</a>
+                                </div>
+                            </li>
+                                                        <li>
+                                <div class="d-flex align-items-center">
+                                    <div class="scroll-index me-3">4</div>
+                                    <a href="https://tu.edu.np/news/1172">त्रिभुवन विश्वविद्यालयको ६७ औं बार्षिक दिवस</a>
+                                </div>
+                            </li>
+                                                    </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</header>
+    <div class="inner-banner" style="background-image: url(/assets/temp1/images/not.png);">
+        <div class="container position-relative">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="https://tu.edu.np">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Notices</li>
+                </ol>
+            </nav>
+            <div class="inner-banner-detail">
+                <h2 class="text-light">Notices</h2>
+            </div>
+        </div>
+    </div>
+
+    <section class="inner-notices">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form class="form" method="GET" action="https://tu.edu.np/notices">
+                        <div class="row">
+                            <div class="col-md-12 form-group my-2">
+                                <input class="form-control border border-secondary" type="title" placeholder="Title"
+                                       name="title" aria-label="Title" value="">
+                            </div>
+
+                            <div class="col-md-4 form-group my-2">
+                                <input type="hidden" name="start_date" id="start_date"
+                                       value="">
+                                <input class="form-control border border-secondary datepicker" type="text"
+                                       value=""
+                                       name="start_date_np" placeholder="Notice from" aria-label="Notice from"
+                                       data-field="#start_date">
+                            </div>
+                            <div class="col-md-4 form-group my-2">
+                                <input type="hidden" name="end_date" id="end_date"
+                                       value="">
+                                <input class="form-control border border-secondary datepicker" type="text"
+                                       value=""
+                                       name="end_date_np" placeholder="Notice to" aria-label="Notice To"
+                                       data-field="#end_date">
+                            </div>
+
+                            <div class="col-md-4 form-group my-2">
+                                <select class="form-select border border-secondary" name="notice_type">
+                                                                            <option value=""
+                                            selected>
+                                            Select Notice Type</option>
+                                                                            <option value="101"
+                                            >
+                                            general notice</option>
+                                                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-outline-success" type="submit"><i class="bi bi-search me-2"></i>
+                                    Search
+                                </button>
+                                <a href="https://tu.edu.np/notices" class="btn btn-danger rounded-0"><i
+                                        class="bi bi-arrow-clockwise me-2 "></i>Refresh</a>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/15192">
+                                <h5>प्रधानमन्त्री दैवी प्रकोप उद्बार कोषमा रकम जम्मा सम्वन्धमा ।</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-09-09</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/15099">
+                                <h5>भोटेकोशी बाढीवाट प्रभावित परीक्षाार्थीहरुकाे लागि विशेष व्यवस्था सम्वन्धी अत्यन्त जरुरी सूचना</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-09-03</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/15078">
+                                <h5>अनुसन्धान निर्देशनालयको नतिजा प्रकाशन सम्बन्धी सूचना</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-09-03</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/14988">
+                                <h5>त्रिवि केन्द्रीय कार्यालयका लागि जारको पिउने पानी सप्लाई सम्बन्धी शिलबन्दी दरभाउपत्र आह्वानको सूचना</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-09-01</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/14909">
+                                <h5>प्रधानमन्त्री दैविक प्रकोप उद्बार कोषमा रकम जम्मा गर्ने सम्वन्धी सूचना</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-08-28</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                            <div class="inner-notice-wrap p-4">
+                            <a class="d-block" href="https://tu.edu.np/notices/14908">
+                                <h5>परीक्षा सम्वन्धी अत्यन्त जरुरी सूचना</h5>
+                                
+                                <br>
+                                <div class="badge bg-danger">
+                                    <span class="nep_date">2026-08-28</span>
+                                </div>
+                            </a>
+
+                        </div>
+                                        <nav>
+        <ul class="pagination">
+            
+                            <li class="page-item disabled" aria-disabled="true">
+                    <span class="page-link">&laquo; Previous</span>
+                </li>
+            
+            
+                            <li class="page-item">
+                    <a class="page-link" href="https://tu.edu.np/notices?cursor=eyJjcmVhdGVkX2F0IjoiMjAyNi0wOC0yOCAxOTo0MzoyNSIsIl9wb2ludHNUb05leHRJdGVtcyI6dHJ1ZX0" rel="next">Next &raquo;</a>
+                </li>
+                    </ul>
+    </nav>
+
+                </div>
+                <div class="col-lg-4">
+                    <div class="sidebar">
+                        <h4 class="title">
+                            More News
+                        </h4>
+                                                    <div class="sidebar-wrapper p-4 mt-4">
+                                <div class="date">
+                                    <span class="nep_date">2026-09-08</span>
+                                </div>
+                                <a href="https://tu.edu.np/news/1237">
+                                    
+                                    <h5>त्रिवि जलतथा मौसम विज्ञान केन्द्रीय विभागद्बारा भोटेकोशी बाढीको वैज्ञानिक तथ्यहरु उजागर</h5>
+                                </a>
+                            </div>
+                                                    <div class="sidebar-wrapper p-4 mt-4">
+                                <div class="date">
+                                    <span class="nep_date">2026-09-02</span>
+                                </div>
+                                <a href="https://tu.edu.np/news/1225">
+                                    
+                                    <h5>त्रिवि शिक्षाध्यक्षमा प्रा.डा अन्जना सिंह र रजिष्ट्रारमा डा.रविन्द्र शिवाकोटी नियुक्त</h5>
+                                </a>
+                            </div>
+                                                    <div class="sidebar-wrapper p-4 mt-4">
+                                <div class="date">
+                                    <span class="nep_date">2026-08-12</span>
+                                </div>
+                                <a href="https://tu.edu.np/news/1196">
+                                    
+                                    <h5>मानवअधिकार र न्याय सम्वन्धमा अन्तराष्ट्रीय सम्मेलन </h5>
+                                </a>
+                            </div>
+                                                    <div class="sidebar-wrapper p-4 mt-4">
+                                <div class="date">
+                                    <span class="nep_date">2026-07-27</span>
+                                </div>
+                                <a href="https://tu.edu.np/news/1180">
+                                    
+                                    <h5>विज्ञान तथा प्रविधि अध्ययन संस्थानमा इन्ट्रानेट जडान तथा हस्तान्तरण पश्चात् अभिमुखीकरण कार्यक्रम सम्पन्न</h5>
+                                </a>
+                            </div>
+                                                    <div class="sidebar-wrapper p-4 mt-4">
+                                <div class="date">
+                                    <span class="nep_date">2026-07-22</span>
+                                </div>
+                                <a href="https://tu.edu.np/news/1175">
+                                    
+                                    <h5>दीर्घसेवा पदकवाट शिक्षक तथा कर्मचारी सम्मानित</h5>
+                                </a>
+                            </div>
+                                            </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="back-to-top">
+    <i class="bi bi-arrow-up"></i>
+</div>
+
+<style>
+    .phone-img-list img { display: inline !important; vertical-align: middle; font-family: 'Mukta', sans-serif !important;
+        font-weight: 500;}
+</style>
+
+<!-- Footer section  started-->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <div class="row">
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3">
+                    <div class="f-link-title">
+                        <h5>INFORMATION OFFICER</h5>
+                        <div class="info-officer mt-2">
+                                                            <div class="card">
+                                    <img src="https://portal.tu.edu.np/medias/2025_04_20_10_08_35.jpg"
+                                        class="card-img-top" alt="...">
+                                    <div class="card-body px-0 py-2">
+                                        <h5 class="card-title">Lilly Thapa Chhetri</h5>
+                                        <p class="card-text">Information Officer (Central Office, Kirtipur)</p>
+                                        <p class="card-text me-3">
+                                            
+                                            014330346
+                                        </p>
+                                    </div>
+                                </div>
+                                                    </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3">
+                    <div class="f-link-title">
+                        <h5>CONTACT US</h5>
+                    </div>
+                    <ul class="f-links">
+                        <li class="phone-img-list">Kirtipur, Kathmandu</li>
+                        <li class="phone-img-list">Phone:
+                                                            4330346                                                    </li>
+                        <li class="phone-img-list">Email:
+                                                            info@tu.edu.np                                                    </li>
+                        <li> Website: https://tu.edu.np </li>
+                    </ul>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3">
+                    <div class="f-link-title">
+                        <h5>RELATED LINKS</h5>
+                    </div>
+                    <ul class="f-links">
+                                                    <li><a href="https://tuexam.edu.np/"> Exam &amp; Results info (Hotline no: +977-1-5384167, 015672783, 015384167)</a></li>
+                                                    <li><a href="https://www.tuexam.edu.np/"> Certificate Verification(Email: tuexam@tribhuvan-university.edu.np)</a></li>
+                                                    <li><a href="https://tucdc.edu.np/"> Curriculum Development Center (Ph. No.- 4334041,4330856)</a></li>
+                                                    <li><a href="https://moest.gov.np/"> Ministry of Education, Science and Technology</a></li>
+                                                    <li><a href="https://www.opmcm.gov.np/"> Office of the Prime Minister and Council of Ministers</a></li>
+                                                    <li><a href="https://www.ugcnepal.edu.np"> University Grants Commission</a></li>
+                                                    <li><a href="https://tucl.tu.edu.np/"> Tribhuvan University Central Library</a></li>
+                                            </ul>
+                </div>
+                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-12 mt-3">
+                                    </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="footer-label text-center pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <p>© 2026 Tribhuvan University. All Rights Reserved <br> <a
+                            href="https://websitedesignnepal.com/" target="_blank" style="color: #888">Website
+                            Design</a> by
+                        <a href="https://www.youngminds.com.np/" target="_blank" style="color: #888"> Young Minds</a>
+                        <br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- All Scripts-->
+<script src="https://tu.edu.np/assets/temp1/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="https://tu.edu.np/assets/temp1/js/app.js"></script>    </body>
+
+</html>

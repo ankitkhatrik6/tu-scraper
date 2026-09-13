@@ -51,9 +51,9 @@ export async function runAllTests() {
 
   // Group 1: Source Validation & Metadata
   console.log('--- Suite 1: Source Validation & Metadata ---');
-  await runTest('Supports exactly the 8 specified official sources', () => {
-    assertEqual(SOURCES.length, 8);
-    const expected = ['iost', 'fohss', 'ioe', 'ac', 'iaas', 'iof', 'foe', 'fol'];
+  await runTest('Supports exactly the 9 specified official sources', () => {
+    assertEqual(SOURCES.length, 9);
+    const expected = ['iost', 'fohss', 'ioe', 'ac', 'iaas', 'iof', 'foe', 'fol', 'tu'];
     for (const src of expected) {
       assert(SOURCES.includes(src as NoticeSource), `SOURCES should include ${src}`);
     }
@@ -66,7 +66,7 @@ export async function runAllTests() {
     assert(!isValidSource('unknown'), 'unknown should NOT be valid');
   });
 
-  await runTest('Provides complete metadata for all 8 institutions', () => {
+  await runTest('Provides complete metadata for all 9 institutions', () => {
     for (const src of SOURCES) {
       const meta = SOURCE_METADATA[src];
       assert(Boolean(meta), `Metadata exists for ${src}`);
@@ -269,6 +269,37 @@ export async function runAllTests() {
       `PDF URL must include 1787314549.pdf, got ${pdfAttachment?.url}`
     );
     assertEqual(detail.pdf, pdfAttachment?.url, 'Primary PDF property should match attached PDF');
+  });
+
+  await runTest('TU central detail page resolves correct title and date (ignores chrome/sidebar)', async () => {
+    const { parseNoticeDetail } = await import('../src/utils/parser');
+    const tuDetailHtml = `<!doctype html><html><head><title>TU Notices</title></head><body>
+      <header><h4 class="brand-name">Tribhuvan University</h4></header>
+      <section class="post-detail">
+        <div class="post-detail-all">
+          <h4 class="title">प्रधानमन्त्री दैवी प्रकोप उद्बार कोषमा रकम जम्मा सम्वन्धमा ।</h4>
+          <div class="badge date"><span id="nep_date">2026-09-09</span></div>
+          <div class="ck-table"><p>विवरण सहितको सूचना प्रकाशन गरिएको छ ।</p></div>
+        </div>
+        <aside class="sidebar">
+          <h4 class="title">More Notices</h4>
+          <span class="nep_date">2026-08-28</span>
+        </aside>
+      </section>
+    </body></html>`;
+
+    const detail = parseNoticeDetail(tuDetailHtml, 'https://tu.edu.np/notices/15192', 'tu', 'https://tu.edu.np');
+    assertEqual(detail.id, '15192');
+    assert(
+      detail.title.includes('प्रधानमन्त्री'),
+      `Title must be the notice heading, got: ${detail.title}`
+    );
+    assertEqual(detail.date, '2026-09-09', 'date must come from the main #nep_date badge, not the sidebar');
+    assert(Boolean(detail.nepaliDate), 'nepaliDate conversion should be present');
+    assert(
+      Boolean(detail.content && detail.content.includes('विवरण')),
+      'Content must be extracted from the .ck-table body'
+    );
   });
 
   console.log(`\n================== SUMMARY ==================`);

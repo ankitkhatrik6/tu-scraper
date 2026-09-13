@@ -27,15 +27,19 @@ export default function Page() {
 
   // Initialize theme from localStorage
   useEffect(() => {
-    setIsMounted(true);
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
-      setDarkMode(true);
-    } else if (savedTheme === 'light') {
-      setDarkMode(false);
-    } else if (window.matchMedia) {
-      setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
-    }
+    // Access browser-only APIs inside a microtask (after the component has hydrated) so React's
+    // effect rules stay happy and the <html data-theme> class is only toggled post-mount.
+    queueMicrotask(() => {
+      setIsMounted(true);
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        setDarkMode(true);
+      } else if (savedTheme === 'light') {
+        setDarkMode(false);
+      } else if (window.matchMedia) {
+        setDarkMode(window.matchMedia('(prefers-color-scheme: dark)').matches);
+      }
+    });
   }, []);
 
   // Sync dark class with document element for Tailwind dark utilities

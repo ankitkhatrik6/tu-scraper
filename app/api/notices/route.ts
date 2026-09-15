@@ -21,7 +21,11 @@ export async function GET(req: NextRequest) {
   const action = searchParams.get('action') || 'notices'; // 'notices' | 'latest' | 'search' | 'detail'
   const enrich = searchParams.get('enrich') !== 'false'; // defaults to true for rich real-time UI
   const bypassCache = searchParams.get('bypassCache') === 'true';
-  const timeout = parseInt(searchParams.get('timeout') || '12000', 10);
+
+  // parseInt() yields NaN for garbage input, which would make setTimeout() fire immediately (and a
+  // negative value would never fire). Normalize to a sane positive range before use.
+  const parsedTimeout = parseInt(searchParams.get('timeout') || '12000', 10);
+  const timeout = Number.isFinite(parsedTimeout) && parsedTimeout > 0 ? Math.min(parsedTimeout, 60000) : 12000;
 
   if (action !== 'detail' && !isValidSource(source)) {
     return NextResponse.json(

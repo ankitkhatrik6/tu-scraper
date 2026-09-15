@@ -9,7 +9,7 @@ import { scrapeIof, IOF_URL } from './sources/iof';
 import { scrapeAc, AC_URL } from './sources/ac';
 import { scrapeIost, IOST_URL } from './sources/iost';
 import { scrapeTu, TU_URL } from './sources/tu';
-import { Notice, NoticeAttachment, NoticeDetail, NoticeSource, ScrapeOptions, SourceMeta, SourceQuery } from './types';
+import { Notice, NoticeAttachment, NoticeDetail, NoticeSource, NOTICE_SOURCES, ScrapeOptions, SourceMeta, SourceQuery } from './types';
 import { fetchHtml } from './utils/http';
 import { parseNoticeDetail } from './utils/parser';
 
@@ -22,18 +22,9 @@ export * from './utils/http';
 
 /**
  * List of all supported Tribhuvan University notice source identifiers
+ * (derived from the canonical list exported by ./types).
  */
-export const SOURCES: readonly NoticeSource[] = [
-  'iost',
-  'fohss',
-  'ioe',
-  'ac',
-  'iaas',
-  'iof',
-  'foe',
-  'fol',
-  'tu',
-] as const;
+export const SOURCES: readonly NoticeSource[] = NOTICE_SOURCES;
 
 /**
  * Metadata and registry of supported TU institutions

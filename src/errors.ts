@@ -1,4 +1,4 @@
-import { NoticeSource } from './types';
+import { NoticeSource, NOTICE_SOURCES } from './types';
 
 /**
  * Base error class for tu-scraper
@@ -18,7 +18,7 @@ export class InvalidSourceError extends TuScrapperError {
   public readonly invalidSource: string;
   public readonly allowedSources: string[];
 
-  constructor(source: string, allowed: string[] = ['iost', 'fohss', 'ioe', 'ac', 'iaas', 'iof', 'foe', 'fol', 'tu', 'all']) {
+  constructor(source: string, allowed: string[] = [...NOTICE_SOURCES, 'all']) {
     super(
       `Invalid notice source "${source}". Supported sources are: ${allowed.map(s => `"${s}"`).join(', ')}.`
     );

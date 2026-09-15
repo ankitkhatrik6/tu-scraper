@@ -1,16 +1,29 @@
 /**
+ * Canonical list of Tribhuvan University (TU) Notice source identifiers.
+ * `NoticeSource` is derived from this single array so the registry, metadata map and validation
+ * error messages can never drift apart from one another.
+ */
+const NOTICE_SOURCE_IDS = [
+  'iost',
+  'fohss',
+  'ioe',
+  'ac',
+  'iaas',
+  'iof',
+  'foe',
+  'fol',
+  'tu',
+] as const;
+
+/**
  * Tribhuvan University (TU) Official Notice Sources
  */
-export type NoticeSource =
-  | 'iost'
-  | 'fohss'
-  | 'ioe'
-  | 'ac'
-  | 'iaas'
-  | 'iof'
-  | 'foe'
-  | 'fol'
-  | 'tu';
+export type NoticeSource = (typeof NOTICE_SOURCE_IDS)[number];
+
+/**
+ * Runtime-readable list of all supported source identifiers.
+ */
+export const NOTICE_SOURCES: readonly NoticeSource[] = NOTICE_SOURCE_IDS;
 
 export type SourceQuery = NoticeSource | 'all';
 

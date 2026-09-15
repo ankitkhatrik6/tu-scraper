@@ -18,7 +18,7 @@
     <img src="https://img.shields.io/badge/Node.js-18%2B%20%7C%2020%2B%20%7C%2022%2B-339933.svg?style=flat-square&logo=nodedotjs" alt="Node.js" />
   </a>
   <a href="https://github.com/ankitkhatrik6/tu-scraper/actions">
-    <img src="https://img.shields.io/badge/Tests-25%2F25%20Passing-brightgreen.svg?style=flat-square" alt="Tests" />
+    <img src="https://img.shields.io/badge/Tests-30%2F30%20Passing-brightgreen.svg?style=flat-square" alt="Tests" />
   </a>
 </div>
 
@@ -264,7 +264,7 @@ app.listen(8080, () => console.log("TU Notices API running on port 8080"));
 
 ## Testing
 
-The package includes a comprehensive test suite with 25 unit tests covering:
+The package includes a comprehensive test suite with 30 unit tests covering:
 - All 9 source adapters using real saved HTML fixtures
 - Notice normalization and schema compliance
 - Search matching & edge cases
@@ -278,6 +278,12 @@ Run the test suite:
 ```bash
 npm test
 ```
+
+---
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for the full release history.
 
 ---
 

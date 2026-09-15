@@ -302,6 +302,54 @@ export async function runAllTests() {
     );
   });
 
+// Group 9: Utility Edge Cases & Regression
+  console.log('\n--- Suite 9: Utility Edge Cases & Regression ---');
+  await runTest('SOURCES registry matches the canonical NOTICE_SOURCES list', async () => {
+    const { NOTICE_SOURCES } = await import('../src/types');
+    assertEqual(JSON.stringify(SOURCES), JSON.stringify([...NOTICE_SOURCES]));
+  });
+
+  await runTest('resolveUrl() handles protocol-relative, query-string and hash URLs', async () => {
+    const { resolveUrl } = await import('../src/utils/parser');
+    assertEqual(resolveUrl('//iost.tu.edu.np/notices/14690', 'https://iost.tu.edu.np'), 'https://iost.tu.edu.np/notices/14690');
+    assertEqual(resolveUrl('/notices/14690?tab=1', 'https://iost.tu.edu.np'), 'https://iost.tu.edu.np/notices/14690?tab=1');
+    assertEqual(
+      resolveUrl('https://portal.tu.edu.np/notice/14690/scan.jpeg', 'https://iost.tu.edu.np'),
+      'https://portal.tu.edu.np/notice/14690/scan.jpeg'
+    );
+    assertEqual(resolveUrl('', 'https://iost.tu.edu.np'), '');
+    assertEqual(resolveUrl(null, 'https://iost.tu.edu.np'), '');
+  });
+
+  await runTest('extractNoticeId() parses singular/plural paths and strips query strings', async () => {
+    const { extractNoticeId } = await import('../src/utils/parser');
+    assertEqual(extractNoticeId('https://iost.tu.edu.np/notice/14690'), '14690');
+    assertEqual(extractNoticeId('https://iost.tu.edu.np/notices/14690?foo=1'), '14690');
+    assertEqual(extractNoticeId('https://iost.tu.edu.np/news/2026/keep'), 'keep');
+    assertEqual(extractNoticeId('https://iost.tu.edu.np/notices/'), 'notice-0');
+  });
+
+  await runTest('MemoryCache() expires entries after the configured TTL', async () => {
+    const shortLived = new MemoryCache<string[]>(5);
+    shortLived.set('key', ['a']);
+    assert(shortLived.has('key'), 'Entry should be present right after set()');
+    await new Promise((resolve) => setTimeout(resolve, 15));
+    assert(!shortLived.has('key'), 'Entry should expire after the TTL elapses');
+    assertEqual(shortLived.get('key'), null);
+  });
+
+  await runTest('getNoticeDetail() accepts a bare notice ID and builds the canonical URL', async () => {
+    const { getNoticeDetail } = await import('../src/index');
+    const detailHtml = fs.readFileSync(path.join(fixturesDir, 'iost.html'), 'utf8');
+    const detail = await getNoticeDetail('14690', 'iost', {
+      htmlFixture: detailHtml,
+      bypassCache: true,
+    });
+    assertEqual(detail.id, '14690');
+    assertEqual(detail.source, 'iost');
+    assert(detail.url.endsWith('/notices/14690'), `URL should end with the canonical notice path, got ${detail.url}`);
+  });
+
   console.log(`\n================== SUMMARY ==================`);
   console.log(`Total: ${passed + failed} | Passed: ${passed} | Failed: ${failed}\n`);
 

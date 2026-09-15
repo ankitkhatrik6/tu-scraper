@@ -49,7 +49,7 @@ export function Header({
     { id: 'guides', label: 'Guides', icon: BookOpen },
     { id: 'api-reference', label: 'API Reference', icon: Code2 },
     { id: 'console', label: 'Console', icon: Play, badge: 'Live' },
-    { id: 'portals', label: 'Portals', icon: Building2, badge: '8' },
+    { id: 'portals', label: 'Portals', icon: Building2, badge: '9' },
   ];
 
   return (

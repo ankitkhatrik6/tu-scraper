@@ -12,26 +12,38 @@ export async function fetchHtml(url: string, options?: ScrapeOptions): Promise<s
   const timeoutMs = options?.timeout ?? DEFAULT_TIMEOUT;
   const userAgent = options?.userAgent ?? DEFAULT_USER_AGENT;
 
+  // AbortController is only exposed as a global on Node >= 20. On runtimes without it (Node 18/19
+  // and some edge deployments) we still enforce the timeout via Promise.race below, and attach the
+  // abort signal when one is available so the underlying socket is actually cancelled.
   let controller: AbortController | null = null;
+  if (typeof AbortController !== 'undefined') {
+    controller = new AbortController();
+  }
+
   let timeoutId: NodeJS.Timeout | null = null;
 
-  try {
-    controller = new AbortController();
+  const raceTimeout = new Promise<never>((_, reject) => {
     timeoutId = setTimeout(() => {
       controller?.abort();
+      reject(new TimeoutError(url, timeoutMs));
     }, timeoutMs);
+  });
 
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'User-Agent': userAgent,
-        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
-        'Accept-Language': 'en-US,en;q=0.9,ne;q=0.8',
-        'Cache-Control': 'no-cache',
-        Pragma: 'no-cache',
-      },
-      signal: controller.signal,
-    });
+  try {
+    const response = await Promise.race([
+      fetch(url, {
+        method: 'GET',
+        headers: {
+          'User-Agent': userAgent,
+          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+          'Accept-Language': 'en-US,en;q=0.9,ne;q=0.8',
+          'Cache-Control': 'no-cache',
+          Pragma: 'no-cache',
+        },
+        ...(controller ? { signal: controller.signal } : {}),
+      }),
+      raceTimeout,
+    ]) as Response;
 
     if (timeoutId) clearTimeout(timeoutId);
 

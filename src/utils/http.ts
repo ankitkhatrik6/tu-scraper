@@ -3,7 +3,7 @@ import { ScrapeOptions } from '../types';
 
 const DEFAULT_TIMEOUT = 10000;
 const DEFAULT_USER_AGENT =
-  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 (TU-Scraper/1.0.0; +https://github.com/ankitkhatrik6/tu-scraper)';
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 (TU-Scraper/1.2.1; +https://github.com/ankitkhatrik6/tu-scraper)';
 
 /**
  * Robust HTTP GET fetcher with timeout and descriptive error mapping

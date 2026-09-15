@@ -93,7 +93,7 @@ export function Header({
                       : 'bg-[#f6f8fa] border border-[#d0d7de] text-[#0969da]'
                   }`}
                 >
-                  v1.0.0
+                  v1.2.1
                 </span>
               </div>
             </button>

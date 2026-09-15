@@ -6,7 +6,7 @@
   <p><strong>TypeScript scraper to fetch official Tribhuvan University (TU) notices across all 9 verified institute, faculty and central office portals.</strong></p>
 
   <a href="https://www.npmjs.com/package/tu-scraper">
-    <img src="https://img.shields.io/badge/npm-v1.2.0-cb3837.svg?style=flat-square&logo=npm" alt="npm version" />
+    <img src="https://img.shields.io/badge/npm-v1.2.1-cb3837.svg?style=flat-square&logo=npm" alt="npm version" />
   </a>
   <a href="https://www.typescriptlang.org/">
     <img src="https://img.shields.io/badge/TypeScript-Strict%20Type%20Safe-3178C6.svg?style=flat-square&logo=typescript" alt="TypeScript" />
